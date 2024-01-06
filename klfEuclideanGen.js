@@ -242,7 +242,7 @@ function list()
 		param 	= arguments[1];
 		val	= arguments[2];
 
-		state_set(channel, param, value);
+		state_set(channel, param, val);
 
 		// make sure main and popup gui's are in sync...
 		// messnamed("gui", [channel, param, "set", value]);

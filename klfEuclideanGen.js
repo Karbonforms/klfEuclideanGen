@@ -50,7 +50,6 @@ post("CHANNELS " + NUM_CHANNELS + "\n");
 
 var PROB_REVERSE = 0.25;
 var PROB_ZERO_OFFSET = 0.20;
-// init();
 
 function loadbang()
 {
@@ -199,9 +198,9 @@ function bang()
 
 		for (var step = 0; step < steps; step++)
 		{
-			if (patterns[channel][(step + (steps - offset)) % steps])
+			if (patterns[channel][(step + (steps - (offset%steps))) % steps])
 			{
-				var vel = accent_patterns[channel][(currentbeat + (beats - acc_offset)) % beats] ? acc_velocity : velocity;
+				var vel = accent_patterns[channel][(currentbeat + (beats - (acc_offset%beats))) % beats] ? acc_velocity : velocity;
 
 				var note = 
 				{
@@ -277,11 +276,8 @@ function update()
 
 function save(name)
 {
-	post("save\n");
-
 	presets.set(name, state);
 	update_presetmenu();
-	// messnamed("---presetmenu", ["symbol", name]);
 	outlet(2, ["presetmenu", "symbol", name]);
 }
 
@@ -310,10 +306,7 @@ function purge_presets()
 
 function load(name)
 {
-	//var presets = new Dict("presets");
 	var data = presets.get(name);
-
-	post ("load len=" + data.length + "\n");
 
 	if (data.length === STATESIZE)
 	{
@@ -330,15 +323,12 @@ function update_presetmenu()
 		presets = new Dict("presets");
 	}
 
-	// messnamed("---presetmenu", "clear");
 	outlet(2, ["presetmenu", "clear"]);
 
 	var keys = presets.getkeys();
 
 	for (var i = 0; i < keys.length; i++)
 	{
-		post("key = " + keys[i] + "\n");
-		// messnamed("---presetmenu", ["append", keys[i]]);
 		outlet(2, ["presetmenu", "append", keys[i]]);
 	}
 }
@@ -347,7 +337,6 @@ function updategui()
 {
 	for (var i = 0; i < STATESIZE; i++)
 	{
-		//messnamed("gui", [Math.floor(i / NUM_PARAMS), i % NUM_PARAMS, "set", state[i]]);
 		outlet(2, [Math.floor(i / NUM_PARAMS), i % NUM_PARAMS, "set", state[i]]);
 	}
 
@@ -356,7 +345,6 @@ function updategui()
 
 function parameter_range(min, max)
 {
-	post("max=" + max + '\n');
 	min_range = min;
 	max_range = max;
 }
@@ -398,28 +386,16 @@ function weightedRandom(min, max)
 
 	var rnd = Math.random() * total;
 
-	// post("rnd = " + rnd + "\n");
-	// post("tot = " + total + "\n");
-
 	for (var w = 0; w < weights.length; w++)
 	{
 		if (rnd < weights[w])
 		{
-			// outlet(0, w + 1 + min);
 			return w + 1 + min;
 		}
 	}
 
 	post("Error in weightedRandom\n" );
 	return min;
-
-	// post("values  " + values + "\n" );
-	// post("weights " + weights + "\n" );
-
-	// var v = chance.weighted(values, weights);
-
-	// outlet(0, Math.round(max / (Math.random() * max + min)));
-	// outlet(0, v);
 }
 
 function random_divider(max)
@@ -435,10 +411,6 @@ function random_divider(max)
 	}
 
 	var rnd = weightedRandom(0, index);
-	// var rnd = Math.floor(Math.random() * index);
-
-	post("rnd=" + rnd + "\n");
-
 
 	return max / dividers[rnd];
 }
@@ -471,14 +443,12 @@ function create_poly_steps()
 	var bases = [3, 5, 7, 11, 13, 17, 19, 23, 29];
 	var result = [];
 
-	post("max_range = " + max_range + "\n");
-
 	for (var i = 0; i < bases.length; i++)
 	{
 		var base = bases[i];
 		var val = base;
 		var num_clashes = 0;
-		var num_added = result.length;
+		//var num_added = result.length;
 
 		while(val < max_range)
 		{
@@ -489,12 +459,9 @@ function create_poly_steps()
 
 			val += base;
 		}
-
-		post("Base " + base + " adds " + (result.length - num_added) + " clashes " + num_clashes + "\n");
 	}
 
 	result.sort(function (a, b) { return a - b });
-	post(result + "\n");
 
 	return result;
 }
@@ -511,8 +478,6 @@ function randomise2()
 	{
 		polysteps = poly_steps_array[getRandomIntRange(0, poly_steps_array.length - 1)];
 	}
-
-	post("polysteps = " + polysteps + "\n");
 
 	for (var ch = 0; ch < NUM_CHANNELS; ch++)
 	{

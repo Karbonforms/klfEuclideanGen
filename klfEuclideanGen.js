@@ -421,16 +421,19 @@ function randomise()
 	{
 		if (state_get(ch, ORD_STATE.LOCK) === 0 && state_get(ch, ORD_STATE.ACTIVE) === 1)
 		{
+			patterns[ch] = [];
+
 			var steps = Math.random() < .2 ? random_divider(max_range) : max_range;
 			steps = LockSteps === 0 ? steps : state_get(ch, ORD_STATE.STEPS);
+
 			var beats = getRandomIntRange(1, steps, 3);
-			patterns[ch] = [];
+
 
 			state_set_locking(ch, ORD_STATE.STEPS, steps);
 			state_set_locking(ch, ORD_STATE.BEATS, beats);
 			state_set_locking(ch, ORD_STATE.OFFSET, Math.random() < PROB_ZERO_OFFSET ? 0 : getRandomIntRange(1, steps));
 			state_set_locking(ch, ORD_STATE.REVERSE, Math.random() < PROB_REVERSE ? 1 : 0);
-			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, beats));
+			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, state_get(ch, ORD_STATE.BEATS)));
 			state_set_locking(ch, ORD_STATE.ACC_OFFSET, getRandomIntRange(0, steps));
 		}
 	}
@@ -503,7 +506,7 @@ function randomise2()
 			state_set_locking(ch, ORD_STATE.BEATS, beats);
 			state_set_locking(ch, ORD_STATE.OFFSET, Math.random() < PROB_ZERO_OFFSET ? 0 : getRandomIntRange(1, steps));
 			state_set_locking(ch, ORD_STATE.REVERSE, Math.random() < PROB_REVERSE ? 1 : 0);
-			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, beats));
+			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, state_get(ch, ORD_STATE.BEATS)));
 			state_set_locking(ch, ORD_STATE.ACC_OFFSET, getRandomIntRange(0, steps));
 		}
 	}
@@ -526,7 +529,7 @@ function randomise3()
 			state_set_locking(ch, ORD_STATE.BEATS, beats);
 			state_set_locking(ch, ORD_STATE.OFFSET, Math.random() < PROB_ZERO_OFFSET ? 0 : getRandomIntRange(1, steps));
 			state_set_locking(ch, ORD_STATE.REVERSE, Math.random() < PROB_REVERSE ? 1 : 0);
-			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, beats));
+			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, state_get(ch, ORD_STATE.BEATS)));
 			state_set_locking(ch, ORD_STATE.ACC_OFFSET, getRandomIntRange(0, steps));
 		}
 	}

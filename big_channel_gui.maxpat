@@ -41,6 +41,66 @@
 		"integercoordinates" : 1,
 		"boxes" : [ 			{
 				"box" : 				{
+					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
+					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"annotation" : "Locking prevents randomisation.",
+					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
+					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
+					"hint" : "Lock parameter",
+					"id" : "obj-6",
+					"maxclass" : "live.text",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"parameter_enable" : 1,
+					"patching_rect" : [ 843.5, 191.0, 89.0, 75.0 ],
+					"pictures" : [ "unlocked.svg", "locked.svg" ],
+					"remapsvgcolors" : 1,
+					"saved_attribute_attributes" : 					{
+						"activebgcolor" : 						{
+							"expression" : ""
+						}
+,
+						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextoncolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"bordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"focusbordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"valueof" : 						{
+							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
+							"parameter_longname" : "live.text[9]",
+							"parameter_mmax" : 1,
+							"parameter_shortname" : "live.text",
+							"parameter_type" : 2
+						}
+
+					}
+,
+					"textcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"usepicture" : 1,
+					"varname" : "live.text[9]"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-38",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -65,19 +125,52 @@
 			}
 , 			{
 				"box" : 				{
+					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
+					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"annotation" : "Locking prevents randomisation.",
+					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
+					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
+					"hint" : "Lock parameter",
 					"id" : "obj-36",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1351.0, 613.0, 44.0, 15.0 ],
+					"patching_rect" : [ 1351.0, 613.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 565.0, 8.5, 20.0, 20.0 ],
+					"presentation_rect" : [ 562.0, 9.0, 20.0, 20.0 ],
+					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
+						"activebgcolor" : 						{
+							"expression" : ""
+						}
+,
+						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextoncolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"bordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"focusbordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
 							"parameter_longname" : "live.text[8]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
@@ -86,6 +179,7 @@
 
 					}
 ,
+					"textcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"usepicture" : 1,
 					"varname" : "live.text[8]"
 				}
@@ -183,26 +277,59 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1190.0, 433.0, 62.0, 24.0 ],
-					"text" : "hidden 1"
+					"patching_rect" : [ 1190.0, 433.0, 86.0, 24.0 ],
+					"text" : "ignoreclick 1"
 				}
 
 			}
 , 			{
 				"box" : 				{
+					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
+					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"annotation" : "Locking prevents randomisation.",
+					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
+					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
+					"hint" : "Lock parameter",
 					"id" : "obj-16",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1134.838947236537933, 604.5, 44.0, 15.0 ],
+					"patching_rect" : [ 1134.838947236537933, 604.5, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 372.0, 8.5, 20.0, 20.0 ],
+					"presentation_rect" : [ 373.0, 9.0, 20.0, 20.0 ],
+					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
+						"activebgcolor" : 						{
+							"expression" : ""
+						}
+,
+						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextoncolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"bordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"focusbordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
 							"parameter_longname" : "live.text[7]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
@@ -211,6 +338,7 @@
 
 					}
 ,
+					"textcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"usepicture" : 1,
 					"varname" : "live.text[7]"
 				}
@@ -218,19 +346,52 @@
 			}
 , 			{
 				"box" : 				{
+					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
+					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"annotation" : "Locking prevents randomisation.",
+					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
+					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
+					"hint" : "Lock parameter",
 					"id" : "obj-13",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1040.838947236537933, 604.5, 44.0, 15.0 ],
+					"patching_rect" : [ 1040.838947236537933, 604.5, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 278.0, 8.5, 20.0, 20.0 ],
+					"presentation_rect" : [ 279.0, 9.0, 20.0, 20.0 ],
+					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
+						"activebgcolor" : 						{
+							"expression" : ""
+						}
+,
+						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextoncolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"bordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"focusbordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
 							"parameter_longname" : "live.text[6]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
@@ -239,6 +400,7 @@
 
 					}
 ,
+					"textcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"usepicture" : 1,
 					"varname" : "live.text[6]"
 				}
@@ -246,19 +408,52 @@
 			}
 , 			{
 				"box" : 				{
+					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
+					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"annotation" : "Locking prevents randomisation.",
+					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
+					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
+					"hint" : "Lock parameter",
 					"id" : "obj-11",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 946.838947236537933, 604.5, 44.0, 15.0 ],
+					"patching_rect" : [ 946.838947236537933, 604.5, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 184.0, 8.5, 20.0, 20.0 ],
+					"presentation_rect" : [ 185.0, 9.0, 20.0, 20.0 ],
+					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
+						"activebgcolor" : 						{
+							"expression" : ""
+						}
+,
+						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextoncolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"bordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"focusbordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
 							"parameter_longname" : "live.text[4]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
@@ -267,6 +462,7 @@
 
 					}
 ,
+					"textcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"usepicture" : 1,
 					"varname" : "live.text[5]"
 				}
@@ -274,19 +470,52 @@
 			}
 , 			{
 				"box" : 				{
+					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
+					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"annotation" : "Locking prevents randomisation.",
+					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
+					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
+					"hint" : "Lock parameter",
 					"id" : "obj-10",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 852.838947236537933, 604.5, 44.0, 15.0 ],
+					"patching_rect" : [ 852.838947236537933, 604.5, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 90.0, 8.0, 20.0, 20.0 ],
+					"presentation_rect" : [ 91.0, 8.0, 20.0, 20.0 ],
+					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
+						"activebgcolor" : 						{
+							"expression" : ""
+						}
+,
+						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextoncolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"bordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"focusbordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
 							"parameter_longname" : "live.text[3]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
@@ -295,6 +524,7 @@
 
 					}
 ,
+					"textcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"usepicture" : 1,
 					"varname" : "live.text[4]"
 				}
@@ -302,19 +532,52 @@
 			}
 , 			{
 				"box" : 				{
+					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
+					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
+					"annotation" : "Locking prevents randomisation.",
+					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
+					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
+					"hint" : "Lock parameter",
 					"id" : "obj-8",
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
 					"parameter_enable" : 1,
-					"patching_rect" : [ 1256.0, 613.0, 44.0, 15.0 ],
+					"patching_rect" : [ 1256.0, 613.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 466.0, 8.5, 20.0, 20.0 ],
+					"presentation_rect" : [ 467.0, 9.0, 20.0, 20.0 ],
+					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
+						"activebgcolor" : 						{
+							"expression" : ""
+						}
+,
+						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextoncolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
+						"bordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"focusbordercolor" : 						{
+							"expression" : ""
+						}
+,
+						"textcolor" : 						{
+							"expression" : "themecolor.live_lcd_control_fg"
+						}
+,
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
 							"parameter_longname" : "live.text[2]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
@@ -323,6 +586,7 @@
 
 					}
 ,
+					"textcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"usepicture" : 1,
 					"varname" : "live.text[3]"
 				}
@@ -407,6 +671,7 @@
 			}
 , 			{
 				"box" : 				{
+					"annotation" : "Locking prevents randomisation.",
 					"hint" : "Lock Channel",
 					"id" : "obj-5",
 					"maxclass" : "live.text",
@@ -421,6 +686,7 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
+							"parameter_info" : "Locking prevents randomisation.",
 							"parameter_longname" : "live.text",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text",
@@ -565,7 +831,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 767.0, 411.5, 44.0, 14.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 562.0, 0.0, 26.0, 37.0 ],
+					"presentation_rect" : [ 559.5, 0.0, 56.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
 						"bordercolor" : 						{
 							"expression" : ""
@@ -892,7 +1158,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 525.0, 400.0, 212.0, 37.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 589.0, -0.5, 131.0, 37.0 ],
+					"presentation_rect" : [ 615.0, -0.5, 105.0, 37.0 ],
 					"saved_attribute_attributes" : 					{
 						"bordercolor" : 						{
 							"expression" : ""
@@ -1421,6 +1687,7 @@
 			"obj-49" : [ "live.dial[4]", "live.numbox[2]", 0 ],
 			"obj-5" : [ "live.text", "live.text", 0 ],
 			"obj-59" : [ "beats1[14]", "live.numbox[2]", 0 ],
+			"obj-6" : [ "live.text[9]", "live.text", 0 ],
 			"obj-60" : [ "offset1[26]", "live.numbox[2]", 0 ],
 			"obj-64" : [ "Trig Note 1[7]", "Trig Note 1", 0 ],
 			"obj-72" : [ "offset1[28]", "live.numbox[2]", 0 ],

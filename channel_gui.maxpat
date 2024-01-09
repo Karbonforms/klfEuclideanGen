@@ -42,6 +42,7 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
@@ -56,7 +57,7 @@
 					"patching_rect" : [ 864.0, 552.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 28.0, 16.0, 12.0, 12.0 ],
+					"presentation_rect" : [ 26.0, 15.0, 12.0, 19.0 ],
 					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
@@ -64,6 +65,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -236,6 +241,7 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
@@ -250,7 +256,7 @@
 					"patching_rect" : [ 1268.0, 560.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 112.0, 31.75, 12.0, 12.0 ],
+					"presentation_rect" : [ 111.0, 30.75, 12.0, 17.0 ],
 					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
@@ -258,6 +264,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -383,6 +393,7 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
@@ -397,7 +408,7 @@
 					"patching_rect" : [ 1052.0, 552.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 84.0, 16.0, 12.0, 12.0 ],
+					"presentation_rect" : [ 82.0, 15.0, 12.0, 19.0 ],
 					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
@@ -405,6 +416,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -445,6 +460,7 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
@@ -459,7 +475,7 @@
 					"patching_rect" : [ 958.0, 552.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 56.0, 16.0, 12.0, 12.0 ],
+					"presentation_rect" : [ 54.0, 15.0, 12.0, 19.0 ],
 					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
@@ -467,6 +483,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -507,6 +527,7 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
@@ -521,7 +542,7 @@
 					"patching_rect" : [ 770.0, 552.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ -0.25, 16.0, 12.0, 12.0 ],
+					"presentation_rect" : [ -2.25, 15.0, 12.0, 19.0 ],
 					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
@@ -529,6 +550,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -569,6 +594,7 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
@@ -583,7 +609,7 @@
 					"patching_rect" : [ 1173.0, 560.0, 89.0, 75.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 112.0, 16.0, 12.0, 12.0 ],
+					"presentation_rect" : [ 110.0, 15.0, 12.0, 19.0 ],
 					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
@@ -591,6 +617,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -686,7 +716,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 833.088219404220581, 399.5, 44.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 0.0, 0.0, 16.5, 17.0 ],
+					"presentation_rect" : [ -1.0, 0.0, 16.5, 17.0 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -727,7 +757,7 @@
 					"patching_rect" : [ 770.338947236537933, 399.5, 44.0, 15.0 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 15.5, 0.0, 15.0, 16.75 ],
+					"presentation_rect" : [ 14.5, 0.0, 15.0, 16.75 ],
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
@@ -810,7 +840,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 226.0, 398.0, 35.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 55.0, 15.0, 30.0, 19.0 ],
+					"presentation_rect" : [ 54.0, 15.0, 31.0, 19.0 ],
 					"saved_attribute_attributes" : 					{
 						"activeslidercolor" : 						{
 							"expression" : ""
@@ -1006,7 +1036,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 299.0, 398.0, 35.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 111.0, 15.0, 30.0, 19.0 ],
+					"presentation_rect" : [ 110.0, 15.0, 31.0, 19.0 ],
 					"saved_attribute_attributes" : 					{
 						"activeslidercolor" : 						{
 							"expression" : ""
@@ -1047,7 +1077,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 263.0, 398.0, 35.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 83.0, 15.0, 30.0, 19.0 ],
+					"presentation_rect" : [ 82.0, 15.0, 31.0, 19.0 ],
 					"saved_attribute_attributes" : 					{
 						"activeslidercolor" : 						{
 							"expression" : ""
@@ -1094,7 +1124,7 @@
 						}
 ,
 						"valueof" : 						{
-							"parameter_enum" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:\"Kick 808 Tone 5 Long 1\"", "37:\"Conga Hi 808 3\"", "38:\"Snare 808 Tone 4 III\"", "39:Clap-808", "40:\"Snare 808 Tone 4 II\"", "41:\"Kick 808 Tone 5 Short\"", "42:\"Hihat Closed 808\"", "43:\"Kick 808 Tone 5 Med\"", "44:\"Tom 808 Hi I\"", "45:\"Tom 808 Mid\"", "46:Hihat-808-Open", "47:\"Snare 808 Tone 4 I\"", "48:\"Tom 808 Lo\"", "49:\"Ride 808 Tone 2 Short 1\"", "50:\"Conga Lo 808 2\"", "51:\"Ride 808 Tone 3 Long\"", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
+							"parameter_enum" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:\"Bass Drum\"", "37:\"Rim Shot\"", "38:\"Snare Drum\"", "39:\"Hand Clap\"", "40:\"Low Conga\"", "41:\"Mid Conga\"", "42:\"Closed Hi Hat\"", "43:\"Hi Conga\"", "44:\"Low Tom\"", "45:\"Mid Tom\"", "46:\"Open Hi Hat\"", "47:\"Hi Tom\"", "48:Maracas", "49:Cymbal", "50:\"Cow Bell\"", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
 							"parameter_initial" : [ 0 ],
 							"parameter_longname" : "Trig Note 1[7]",
 							"parameter_shortname" : "Trig Note 1",
@@ -1122,7 +1152,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 150.0, 398.0, 41.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -1.0, 15.0, 30.0, 19.0 ],
+					"presentation_rect" : [ -2.0, 15.0, 31.0, 19.0 ],
 					"saved_attribute_attributes" : 					{
 						"bordercolor" : 						{
 							"expression" : ""
@@ -1159,7 +1189,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 191.0, 398.0, 35.0, 19.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 27.0, 15.0, 30.0, 19.0 ],
+					"presentation_rect" : [ 26.0, 15.0, 31.0, 19.0 ],
 					"saved_attribute_attributes" : 					{
 						"activeslidercolor" : 						{
 							"expression" : ""
@@ -1198,7 +1228,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 531.0, 399.0, 89.0, 15.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ 31.0, 1.0, 58.0, 15.0 ],
+					"presentation_rect" : [ 30.875, 1.0, 58.125, 15.0 ],
 					"saved_attribute_attributes" : 					{
 						"bordercolor" : 						{
 							"expression" : ""

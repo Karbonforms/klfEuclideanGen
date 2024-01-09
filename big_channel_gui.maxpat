@@ -118,7 +118,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1340.0, 644.0, 89.0, 24.0 ],
+					"patching_rect" : [ 1335.0, 717.0, 89.0, 24.0 ],
 					"text" : "prepend lock"
 				}
 
@@ -127,12 +127,14 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
 					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
 					"hint" : "Lock parameter",
 					"id" : "obj-36",
+					"ignoreclick" : 1,
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -149,6 +151,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -205,7 +211,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1238.0, 640.0, 89.0, 24.0 ],
+					"patching_rect" : [ 1233.0, 713.0, 89.0, 24.0 ],
 					"text" : "prepend lock"
 				}
 
@@ -217,7 +223,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1139.0, 640.0, 89.0, 24.0 ],
+					"patching_rect" : [ 1134.0, 713.0, 89.0, 24.0 ],
 					"text" : "prepend lock"
 				}
 
@@ -229,7 +235,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1040.838947236537933, 640.0, 89.0, 24.0 ],
+					"patching_rect" : [ 1036.0, 713.0, 89.0, 24.0 ],
 					"text" : "prepend lock"
 				}
 
@@ -241,7 +247,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 943.0, 640.0, 89.0, 24.0 ],
+					"patching_rect" : [ 938.0, 713.0, 89.0, 24.0 ],
 					"text" : "prepend lock"
 				}
 
@@ -253,7 +259,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 839.338947236537933, 640.0, 89.0, 24.0 ],
+					"patching_rect" : [ 834.0, 713.0, 89.0, 24.0 ],
 					"text" : "prepend lock"
 				}
 
@@ -286,12 +292,14 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
 					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
 					"hint" : "Lock parameter",
 					"id" : "obj-16",
+					"ignoreclick" : 1,
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -308,6 +316,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -348,12 +360,14 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
 					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
 					"hint" : "Lock parameter",
 					"id" : "obj-13",
+					"ignoreclick" : 1,
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -370,6 +384,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -410,12 +428,14 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
 					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
 					"hint" : "Lock parameter",
 					"id" : "obj-11",
+					"ignoreclick" : 1,
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -432,6 +452,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -472,12 +496,14 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
 					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
 					"hint" : "Lock parameter",
 					"id" : "obj-10",
+					"ignoreclick" : 1,
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -494,6 +520,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,
@@ -534,12 +564,14 @@
 				"box" : 				{
 					"activebgcolor" : [ 0.117647058823529, 0.117647058823529, 0.117647058823529, 0.0 ],
 					"activebgoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 0.0 ],
+					"activetextcolor" : [ 0.282352941176471, 0.282352941176471, 0.282352941176471, 1.0 ],
 					"activetextoncolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"annotation" : "Locking prevents randomisation.",
 					"bordercolor" : [ 0.066666666666667, 0.066666666666667, 0.066666666666667, 0.0 ],
 					"focusbordercolor" : [ 0.568627450980392, 0.568627450980392, 0.568627450980392, 0.0 ],
 					"hint" : "Lock parameter",
 					"id" : "obj-8",
+					"ignoreclick" : 1,
 					"maxclass" : "live.text",
 					"numinlets" : 1,
 					"numoutlets" : 2,
@@ -556,6 +588,10 @@
 						}
 ,
 						"activebgoncolor" : 						{
+							"expression" : ""
+						}
+,
+						"activetextcolor" : 						{
 							"expression" : ""
 						}
 ,

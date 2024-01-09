@@ -7,6 +7,10 @@ autowatch = 1;
 inlets = 1;
 outlets = 3;
 
+const OUT_NOTES = 0;
+const OUT_RELOAD = 1;
+const OUT_GUI = 2;
+
 setoutletassist(0, "Note Dict");
 setoutletassist(1, "bang");
 setoutletassist(2, "gui");
@@ -32,9 +36,13 @@ const NUM_PARAMS = Object.keys(ORD_STATE).length;
 const STATESIZE = NUM_CHANNELS * NUM_PARAMS;
 
 var patterns = Array(NUM_CHANNELS);
+var Notes = Array(NUM_CHANNELS);
 var accent_patterns = Array(NUM_CHANNELS);
+var channel_dirty = Array(NUM_CHANNELS);
+
 var state = Array(STATESIZE);
 var locks = Array(STATESIZE);
+
 var context = {};
 var LockSteps = 0;
 
@@ -50,6 +58,8 @@ post("CHANNELS " + NUM_CHANNELS + "\n");
 
 var PROB_REVERSE = 0.25;
 var PROB_ZERO_OFFSET = 0.20;
+var PROB_POLY = 1;
+var PROB_POLY_ON_CHANNEL = 0.30;
 
 function loadbang()
 {
@@ -58,6 +68,7 @@ function loadbang()
 		var offset = ch * NUM_PARAMS;
 		
 		patterns[ch] = [];
+		channel_dirty[ch] = true;
 
 		state[offset + ORD_STATE.STEPS] = 16;
 		state[offset + ORD_STATE.BEATS] = 8 + ch;
@@ -91,12 +102,14 @@ function state_set_locking(ch, ord, val)
 	if (locks[param_offset] === 0)
 	{
 		state[param_offset] = val;
+		channel_dirty[ch] = true;
 	}
 }
 
 function state_set(ch, ord, val)
 {
 	state[(ch * NUM_PARAMS) + ord] = val;
+	channel_dirty[ch] = true;
 }
 
 function lock_set(ch, ord, val)
@@ -111,36 +124,70 @@ function state_get(ch, ord)
 
 function create_patterns()
 {
+	var numnotes = 0;
 	for (var ch = 0; ch < NUM_CHANNELS; ch++)
 	{
-		create_pattern(ch);
+		numnotes += create_pattern(ch);
 	}
+	return numnotes;
+}
+
+function post_pattern(pat)
+{
+	for (var i = 0; i < pat.length; i++)
+	{
+		post(pat[i] ? 1 : 0);
+	}
+	post("\n");
 }
 
 function create_pattern(channel)
 {
-	var accents	= state_get(channel, ORD_STATE.ACCENTS);
-	var steps	= state_get(channel, ORD_STATE.STEPS);
-	var beats	= state_get(channel, ORD_STATE.BEATS);
-	var reverse	= state_get(channel, ORD_STATE.REVERSE);
-
-	patterns[channel] = [];
-	accent_patterns[channel] = [];
-
-	for (var step = 0; step < steps; step++)
+	if (channel_dirty[channel] === true)
 	{
-		patterns[channel].push(isEuclideanBeat(step, beats, steps));
-	}
-	
-    if (reverse === 1)
-    {
-        patterns[channel] = patterns[channel].reverse();
-    }
+		channel_dirty[channel] = false;
 
-	for (var beat = 0; beat < beats; beat++)
-	{
-		accent_patterns[channel].push(isEuclideanBeat(beat, accents, beats));
+		var steps 			= state_get(channel, ORD_STATE.STEPS);
+		var beats 			= state_get(channel, ORD_STATE.BEATS);
+		var offset 			= state_get(channel, ORD_STATE.OFFSET);
+		var accents 		= state_get(channel, ORD_STATE.ACCENTS);
+		var accents_offset 	= state_get(channel, ORD_STATE.ACC_OFFSET);
+		var reverse 		= state_get(channel, ORD_STATE.REVERSE);
+
+
+		patterns[channel] = [];
+		accent_patterns[channel] = [];
+
+		for (var step = 0; step < steps; step++)
+		{
+			patterns[channel].push(is_euclid_beat(step, beats, steps));
+		}
+
+		for (var oi = 0; oi < offset; oi++)
+		{
+			patterns[channel].unshift(patterns[channel].pop());
+		}
+
+		if (reverse === 1)
+		{
+			patterns[channel] = patterns[channel].reverse();
+		}
+
+		for (var beat = 0; beat < beats; beat++)
+		{
+			accent_patterns[channel].push(is_euclid_beat(beat, accents, beats));
+		}
+
+		for (var aoi = 0; aoi < accents_offset; aoi++)
+		{
+			accent_patterns[channel].unshift(accent_patterns[channel].pop());
+		}
+
+		post_pattern(patterns[channel]);
+		post_pattern(accent_patterns[channel]);
 	}
+
+	return state_get(channel, ORD_STATE.ACTIVE) === 1 ? state_get(channel, ORD_STATE.BEATS) : 0;
 }
 
 function dictionary(v)
@@ -170,47 +217,52 @@ function bang()
 
 	//delete_clip_notes();
 
-	create_patterns();
+	var numnotes = create_patterns();
+	var notes = Array(numnotes);
+	var notecount = 0;
 
-	var notes = [];
-
-	var targetLength = context.clip.time_selection_end - context.clip.time_selection_start;
+	var start_time = context.clip.time_selection_start;
+	var clip_len = context.clip.time_selection_end - start_time;
 	
 	for (var channel = 0; channel < NUM_CHANNELS; channel++)
 	{
 		if (state_get(channel, ORD_STATE.ACTIVE) === 0) continue;
+		// if (channel_dirty[channel] === false) continue;
 
 		var steps 			= state_get(channel, ORD_STATE.STEPS);
-		var beats 			= state_get(channel, ORD_STATE.BEATS);
-		var offset 			= state_get(channel, ORD_STATE.OFFSET);
+		// var beats 			= state_get(channel, ORD_STATE.BEATS);
+		// var offset 			= state_get(channel, ORD_STATE.OFFSET);
 
 		//var accents 		= state_get(channel, ORD_STATE.ACCENTS);
-		var acc_offset 		= state_get(channel, ORD_STATE.ACC_OFFSET);
+		// var acc_offset 		= state_get(channel, ORD_STATE.ACC_OFFSET);
 
 		var pitch 			= state_get(channel, ORD_STATE.PITCH);
 		var velocity 		= state_get(channel, ORD_STATE.VELOCITY);
 		var acc_velocity 	= state_get(channel, ORD_STATE.ACC_VELOCITY);
 		var length 			= state_get(channel, ORD_STATE.LENGTH);
 
-		var division = targetLength / steps;
+		var division = clip_len / steps;
 		var len = (length / 100.0) * division;
 		var currentbeat = 0;
 
+		//Notes[channel] = Array(beats);
+
 		for (var step = 0; step < steps; step++)
 		{
-			if (patterns[channel][(step + (steps - (offset%steps))) % steps])
+			//if (patterns[channel][(step + (steps - (offset % steps))) % steps])
+			if (patterns[channel][step])
 			{
-				var vel = accent_patterns[channel][(currentbeat + (beats - (acc_offset%beats))) % beats] ? acc_velocity : velocity;
+				// var vel = accent_patterns[channel][(currentbeat + (beats - (acc_offset % beats))) % beats] ? acc_velocity : velocity;
+				var vel = accent_patterns[channel][currentbeat] ? acc_velocity : velocity;
 
-				var note = 
-				{
+				notes[notecount++] = {
 					pitch: pitch,
-					start_time: context.clip.time_selection_start + (step * division),
+					start_time: start_time + (step * division),
 					velocity: vel,
 					duration: len
 				};
 
-				notes.push(note);
+				// notes.push(note);
 				currentbeat++;
 			}
 		}
@@ -219,7 +271,7 @@ function bang()
 	var dict = new Dict();
     dict.parse(JSON.stringify({ notes: notes }));
 
-    outlet(0, 'dictionary', dict.name);
+    outlet(OUT_NOTES, 'dictionary', dict.name);
 }
 
 // function isEuclideanBeat(step, offset, beats, steps)
@@ -227,7 +279,7 @@ function bang()
 // 	return Math.abs(((step - offset) * beats) % steps) < beats;
 // }
 
-function isEuclideanBeat(step, beats, steps)
+function is_euclid_beat(step, beats, steps)
 {
 	return (step * beats) % steps < beats;
 }
@@ -239,7 +291,7 @@ function list()
 	{
 		channel = arguments[0];
 		param 	= arguments[1];
-		val	= arguments[2];
+		val		= arguments[2];
 
 		state_set(channel, param, val);
 
@@ -254,10 +306,10 @@ function list()
 
 	if (arguments.length === 4)
 	{
-		channel = arguments[0];
-		param 	= arguments[1];
+		channel 	= arguments[0];
+		param 		= arguments[1];
 		var cmd		= arguments[2];
-		val		= arguments[3];
+		val			= arguments[3];
 
 		if (cmd !== "lock")
 		{
@@ -271,14 +323,14 @@ function list()
 
 function update()
 {
-    outlet(1, 'bang');
+    outlet(OUT_RELOAD, 'bang');
 }
 
 function save(name)
 {
 	presets.set(name, state);
 	update_presetmenu();
-	outlet(2, ["presetmenu", "symbol", name]);
+	outlet(OUT_GUI, ["presetmenu", "symbol", name]);
 }
 
 function del(name)
@@ -323,13 +375,13 @@ function update_presetmenu()
 		presets = new Dict("presets");
 	}
 
-	outlet(2, ["presetmenu", "clear"]);
+	outlet(OUT_GUI, ["presetmenu", "clear"]);
 
 	var keys = presets.getkeys();
 
 	for (var i = 0; i < keys.length; i++)
 	{
-		outlet(2, ["presetmenu", "append", keys[i]]);
+		outlet(OUT_GUI, ["presetmenu", "append", keys[i]]);
 	}
 }
 
@@ -337,7 +389,7 @@ function updategui()
 {
 	for (var i = 0; i < STATESIZE; i++)
 	{
-		outlet(2, [Math.floor(i / NUM_PARAMS), i % NUM_PARAMS, "set", state[i]]);
+		outlet(OUT_GUI, [Math.floor(i / NUM_PARAMS), i % NUM_PARAMS, "set", state[i]]);
 	}
 
 	messnamed("set_range", ["set", RANGES.indexOf(max_range)]);
@@ -349,7 +401,7 @@ function parameter_range(min, max)
 	max_range = max;
 }
 
-function getRandomIntRange(min, maxx, ndice)
+function rnd_int_dice(min, maxx, ndice)
 {
 	min = Math.ceil(min);
 	maxx = Math.floor(maxx);
@@ -365,12 +417,7 @@ function getRandomIntRange(min, maxx, ndice)
 	return Math.floor(Math.random() * (maxx - min) + min);
 }
 
-function _weightedRandom(min, max)
-{
-	return Math.round(max / (Math.random() * max + min));
-}
-
-function weightedRandom(min, max)
+function rnd_int_low(min, max)
 {
 	// var values = Array(max - min);
 	var weights = Array(max - min);
@@ -410,9 +457,42 @@ function random_divider(max)
 		}
 	}
 
-	var rnd = weightedRandom(0, index);
+	var rnd = rnd_int_low(0, index);
 
 	return max / dividers[rnd];
+}
+
+function rnd_steps()
+{
+	var bases = [3, 5, 7, 11, 13, 17, 19, 23, 29];
+	var sizes = [];
+
+	for (var i = 0; i < bases.length; i++)
+	{
+		var base = bases[i];
+		var val = base;
+		var num_clashes = 0;
+		//var num_added = sizes.length;
+
+		while(val < max_range)
+		{
+			if (! sizes.includes(val))
+				sizes.push(val);
+			else
+				num_clashes++;
+
+			val += base;
+		}
+	}
+
+	sizes.sort(function (a, b) { return a - b });
+
+	return sizes[rnd_int_dice(0, sizes.length - 1)];
+}
+
+function prob_chk(prob)
+{
+	return Math.random() < prob;
 }
 
 function randomise()
@@ -421,93 +501,52 @@ function randomise()
 	{
 		if (state_get(ch, ORD_STATE.LOCK) === 0 && state_get(ch, ORD_STATE.ACTIVE) === 1)
 		{
-			patterns[ch] = [];
-
 			var steps = Math.random() < .2 ? random_divider(max_range) : max_range;
 			steps = LockSteps === 0 ? steps : state_get(ch, ORD_STATE.STEPS);
 
-			var beats = getRandomIntRange(1, steps, 3);
-
+			var beats = rnd_int_dice(1, steps, 3);
 
 			state_set_locking(ch, ORD_STATE.STEPS, steps);
 			state_set_locking(ch, ORD_STATE.BEATS, beats);
-			state_set_locking(ch, ORD_STATE.OFFSET, Math.random() < PROB_ZERO_OFFSET ? 0 : getRandomIntRange(1, steps));
-			state_set_locking(ch, ORD_STATE.REVERSE, Math.random() < PROB_REVERSE ? 1 : 0);
-			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, state_get(ch, ORD_STATE.BEATS)));
-			state_set_locking(ch, ORD_STATE.ACC_OFFSET, getRandomIntRange(0, steps));
+			state_set_locking(ch, ORD_STATE.OFFSET, prob_chk(PROB_ZERO_OFFSET) ? 0 : rnd_int_dice(1, state_get(ch, ORD_STATE.STEPS)));
+			state_set_locking(ch, ORD_STATE.REVERSE, prob_chk(PROB_REVERSE) ? 1 : 0);
+			state_set_locking(ch, ORD_STATE.ACCENTS, rnd_int_low(0, state_get(ch, ORD_STATE.BEATS)));
+			state_set_locking(ch, ORD_STATE.ACC_OFFSET, rnd_int_dice(0, state_get(ch, ORD_STATE.STEPS)));
 		}
 	}
 	updategui();
 	update();
 }
 
-function create_poly_steps()
-{
-	var bases = [3, 5, 7, 11, 13, 17, 19, 23, 29];
-	var result = [];
-
-	for (var i = 0; i < bases.length; i++)
-	{
-		var base = bases[i];
-		var val = base;
-		var num_clashes = 0;
-		//var num_added = result.length;
-
-		while(val < max_range)
-		{
-			if (! result.includes(val))
-				result.push(val);
-			else
-				num_clashes++;
-
-			val += base;
-		}
-	}
-
-	result.sort(function (a, b) { return a - b });
-
-	return result;
-}
-
 function randomise2()
 {
-	var chance_of_poly = 1;
-	var chance_of_poly_on_channel = 0.30;
-	var polysteps = 0;
-
-	var poly_steps_array = create_poly_steps();
-
-	if (Math.random() < chance_of_poly)
-	{
-		polysteps = poly_steps_array[getRandomIntRange(0, poly_steps_array.length - 1)];
-	}
+	var interesting_steps = prob_chk(PROB_POLY) ? rnd_steps() : 0;
 
 	for (var ch = 0; ch < NUM_CHANNELS; ch++)
 	{
 		if (state_get(ch, ORD_STATE.LOCK) === 0)
 		{
 			var steps= max_range;
-			patterns[ch] = [];
 
-			if (polysteps !== 0 && Math.random() < chance_of_poly_on_channel)
+			if (interesting_steps !== 0 && prob_chk(PROB_POLY_ON_CHANNEL))
 			{
-				steps = polysteps;
+				steps = interesting_steps;
 			}
 			else
 			{
-				steps = Math.random() < chance_of_poly_on_channel ? random_divider(max_range) : max_range;
+				steps = prob_chk(PROB_POLY_ON_CHANNEL) ? random_divider(max_range) : max_range;
 			}
 
 			steps = LockSteps === 0 ? steps : state_get(ch, ORD_STATE.STEPS);
 
-			var beats = getRandomIntRange(1, steps, 3);
+			var beats = rnd_int_dice(1, steps, 3);
 
 			state_set_locking(ch, ORD_STATE.STEPS, steps);
 			state_set_locking(ch, ORD_STATE.BEATS, beats);
-			state_set_locking(ch, ORD_STATE.OFFSET, Math.random() < PROB_ZERO_OFFSET ? 0 : getRandomIntRange(1, steps));
-			state_set_locking(ch, ORD_STATE.REVERSE, Math.random() < PROB_REVERSE ? 1 : 0);
-			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, state_get(ch, ORD_STATE.BEATS)));
-			state_set_locking(ch, ORD_STATE.ACC_OFFSET, getRandomIntRange(0, steps));
+			state_set_locking(ch, ORD_STATE.OFFSET, prob_chk(PROB_ZERO_OFFSET) ? 0 : rnd_int_dice(1, state_get(ch, ORD_STATE.STEPS)));
+			state_set_locking(ch, ORD_STATE.REVERSE, prob_chk(PROB_REVERSE) ? 1 : 0);
+			state_set_locking(ch, ORD_STATE.ACCENTS, rnd_int_low(0, state_get(ch, ORD_STATE.BEATS)));
+			state_set_locking(ch, ORD_STATE.ACC_OFFSET, rnd_int_dice(0, state_get(ch, ORD_STATE.STEPS)));
 		}
 	}
 	updategui();
@@ -520,17 +559,15 @@ function randomise3()
 	{
 		if (state_get(ch, ORD_STATE.LOCK) === 0)
 		{
-			patterns[ch] = [];
-
-			var steps = LockSteps === 0 ? getRandomIntRange(1, max_range) : state_get(ch, ORD_STATE.STEPS);
-			var beats = getRandomIntRange(1, steps, 3);
+			var steps = LockSteps === 0 ? rnd_int_dice(1, max_range) : state_get(ch, ORD_STATE.STEPS);
+			var beats = rnd_int_dice(1, steps, 3);
 
 			state_set_locking(ch, ORD_STATE.STEPS, steps);
 			state_set_locking(ch, ORD_STATE.BEATS, beats);
-			state_set_locking(ch, ORD_STATE.OFFSET, Math.random() < PROB_ZERO_OFFSET ? 0 : getRandomIntRange(1, steps));
-			state_set_locking(ch, ORD_STATE.REVERSE, Math.random() < PROB_REVERSE ? 1 : 0);
-			state_set_locking(ch, ORD_STATE.ACCENTS, weightedRandom(0, state_get(ch, ORD_STATE.BEATS)));
-			state_set_locking(ch, ORD_STATE.ACC_OFFSET, getRandomIntRange(0, steps));
+			state_set_locking(ch, ORD_STATE.OFFSET, prob_chk(PROB_ZERO_OFFSET) ? 0 : rnd_int_dice(1, state_get(ch, ORD_STATE.STEPS)));
+			state_set_locking(ch, ORD_STATE.REVERSE, prob_chk(PROB_REVERSE) ? 1 : 0);
+			state_set_locking(ch, ORD_STATE.ACCENTS, rnd_int_low(0, state_get(ch, ORD_STATE.BEATS)));
+			state_set_locking(ch, ORD_STATE.ACC_OFFSET, rnd_int_dice(0, state_get(ch, ORD_STATE.STEPS)));
 		}
 	}
 	updategui();

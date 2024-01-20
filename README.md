@@ -12,6 +12,11 @@ Note length is simply a percent of Step size.
 
 Can acquire pad/note names from a DrumRack found downstream of current clip.
 
+TODO
+- [ ] Randomisation: Minimum/Maximum Beats for channel.
+- [ ] Popface: Allow for typing-in main parameters.
+- [ ] Embedded GUI: Tidy up settings page.
+
 Example Usage:
 
 1. Create track with a DrumRack, maybe "808 Core Kit"

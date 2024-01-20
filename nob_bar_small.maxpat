@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 34.0, 77.0, 1400.0, 921.0 ],
+		"rect" : [ 34.0, 77.0, 1530.0, 921.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 1,
 		"default_fontsize" : 12.0,
@@ -39,19 +39,6 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
-				"box" : 				{
-					"id" : "obj-5",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 454.0, 251.0, 67.0, 22.0 ],
-					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
-					"text" : "thispatcher"
-				}
-
-			}
-, 			{
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-3",
@@ -84,7 +71,7 @@
 					"patching_rect" : [ 101.052635192871094, 226.315797567367554, 31.092437326908112, 31.092437326908112 ],
 					"pictures" : [ "unlocked.svg", "locked.svg" ],
 					"presentation" : 1,
-					"presentation_rect" : [ 8.0, 19.0, 15.0, 15.0 ],
+					"presentation_rect" : [ 9.146341681480408, 18.902439475059509, 15.0, 15.0 ],
 					"remapsvgcolors" : 1,
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
@@ -146,7 +133,7 @@
 					"parameter_enable" : 1,
 					"patching_rect" : [ 32.881580471992493, 176.94737446308136, 45.263159513473511, 24.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -0.447368000000001, 0.0, 32.0, 24.0 ],
+					"presentation_rect" : [ 0.5, 0.0, 31.0, 24.0 ],
 					"saved_attribute_attributes" : 					{
 						"activebgcolor" : 						{
 							"expression" : ""
@@ -231,8 +218,8 @@
 					"parameter_enable" : 0,
 					"patching_rect" : [ 35.513160228729248, 168.94737446308136, 40.0, 40.0 ],
 					"presentation" : 1,
-					"presentation_rect" : [ -0.447368, 0.0, 32.0, 32.0 ],
-					"size" : 32.0,
+					"presentation_rect" : [ -4.0, -4.0, 40.0, 40.0 ],
+					"size" : 64.0,
 					"varname" : "dial"
 				}
 
@@ -307,6 +294,19 @@
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 66.59885385632515, 33.684211730957031, 100.0, 22.0 ],
 					"text" : "r ---set_range"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-5",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 2,
+					"outlettype" : [ "", "" ],
+					"patching_rect" : [ 454.0, 311.0, 67.0, 22.0 ],
+					"save" : [ "#N", "thispatcher", ";", "#Q", "end", ";" ],
+					"text" : "thispatcher"
 				}
 
 			}

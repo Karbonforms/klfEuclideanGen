@@ -5,16 +5,25 @@ include("core");
 
 autowatch = 1;
 inlets = 1;
-outlets = 4;
+outlets = 7;
 
-const OUT_NOTES 	= 0;
-const OUT_RELOAD 	= 1;
-const OUT_GUI 		= 2;
-const OUT_TEST 		= 3;
+const OUT_PITCH 	= 0;
+const OUT_START 	= 1;
+const OUT_VELOCITY 	= 2;
+const OUT_DURATION 	= 3;
 
-setoutletassist(0, "Note Dict");
-setoutletassist(1, "bang");
-setoutletassist(2, "gui");
+const OUT_RELOAD 	= 4;
+const OUT_GUI 		= 5;
+const OUT_SEND 		= 6;
+// const OUT_TEST 		= 3;
+
+setoutletassist(0, "PITCH");
+setoutletassist(1, "START");
+setoutletassist(2, "VELOCITY");
+setoutletassist(3, "DURATION");
+setoutletassist(4, "RELOAD");
+setoutletassist(5, "GUI");
+setoutletassist(6, "SEND");
 
 const ORD_STATE =
 {
@@ -152,9 +161,28 @@ function post_pattern(pat)
 	post("\n");
 }
 
+function count_pattern(pat)
+{
+	var n = 0;
+	for (var i = 0; i < pat.length; i++)
+	{
+		n += pat[i] ? 1 : 0;
+	}
+	return n;
+}
+
+function isEuclideanBeat(step, offset, beats, steps)
+{
+	offset %= steps;
+	offset = steps - offset;
+	return Math.abs(((step + offset) * beats) % steps) < beats;
+}
+
 function create_pattern(channel)
 {
-	if (channel_dirty[channel] === true)
+	var active = state_get(channel, ORD_STATE.ACTIVE);
+
+	if (channel_dirty[channel] === true && active === 1)
 	{
 		channel_dirty[channel] = false;
 
@@ -173,13 +201,26 @@ function create_pattern(channel)
 
 		for (var step = 0; step < steps; step++)
 		{
-			pattern[step] = is_euclid_beat(step, beats, steps);
+			pattern[step] = isEuclideanBeat(step, offset, beats, steps);
 		}
 
-		for (var oi = 0; oi < offset; oi++)
-		{
-			pattern.unshift(pattern.pop());
-		}
+		// for (var oi = 0; oi < offset; oi++)
+		// {
+		// 	pattern.unshift(pattern.pop());
+		// }
+		//
+		// var test = Array(pattern.length);
+		//
+		// for (step = 0; step < steps; step++)
+		// {
+		// 	test[step] = isEuclideanBeat(step, offset, beats, steps);
+		// }
+		//
+		// post("target:");
+		// post_pattern(pattern);
+		// post("  test:");
+		// post_pattern(test);
+
 
 		if (reverse === 1)
 		{
@@ -188,23 +229,32 @@ function create_pattern(channel)
 
 		for (var beat = 0; beat < beats; beat++)
 		{
-			accent_pattern[beat] = is_euclid_beat(beat, accents, beats);
+			accent_pattern[beat] = isEuclideanBeat(beat, accents_offset, accents, beats);
 		}
 
-		for (var aoi = 0; aoi < accents_offset; aoi++)
-		{
-			accent_pattern.unshift(accent_pattern.pop());
-		}
+		// for (var aoi = 0; aoi < accents_offset; aoi++)
+		// {
+		// 	accent_pattern.unshift(accent_pattern.pop());
+		// }
 
 		patterns[channel] = pattern;
 		accent_patterns[channel] = accent_pattern;
 
 		// post_pattern(patterns[channel]);
-		// post_pattern(accent_patterns[channel]);
+		//post_pattern(accent_patterns[channel]);
 	}
 
-	var numnotes = Math.min(state_get(channel, ORD_STATE.BEATS), state_get(channel, ORD_STATE.STEPS))
-	return state_get(channel, ORD_STATE.ACTIVE) === 1 ? numnotes : 0;
+	if (active === 1)
+	{
+		var nn = Math.min(state_get(channel, ORD_STATE.BEATS), state_get(channel, ORD_STATE.STEPS));
+		// ps("channel " + channel + " reporting " + nn);
+		// ps("channel " + channel + " counted   " + count_pattern(patterns[channel]));
+		return nn;
+	}
+	else
+	{
+		return 0;
+	}
 }
 
 function dictionary(v)
@@ -235,11 +285,12 @@ function bang()
 	//delete_clip_notes();
 
 	var numnotes = create_patterns();
+	var notes_out = 0;
 
 	post("numnotes = " + numnotes + "\n");
 
-	var notes = Array(numnotes);
-	var notecount = 0;
+	// var notes = Array(numnotes);
+	// var notecount = 0;
 
 	const start_time = context.clip.time_selection_start;
 	const clip_len = context.clip.time_selection_end - start_time;
@@ -262,36 +313,43 @@ function bang()
 
 		var currentbeat = 0;
 
+		// ps ("channel " + channel + " steps " + steps);
+
 		for (var step = 0; step < steps; step++)
 		{
 			if (pattern[step])
 			{
 				var vel = accent_pattern[currentbeat++] ? acc_velocity : velocity;
 
-				notes[notecount++] = {
-					pitch: pitch,
-					start_time: start_time + (step * division),
-					velocity: vel,
-					duration: len
-				};
+				// notes[notecount++] = {
+				// 	pitch: pitch,
+				// 	start_time: start_time + (step * division),
+				// 	velocity: vel,
+				// 	duration: len
+				// };
+
+				//ps(++notes_out);
+
+				outlet(OUT_DURATION, len);
+				outlet(OUT_VELOCITY, vel);
+				outlet(OUT_START, start_time + (step * division));
+				outlet(OUT_PITCH, pitch);
 			}
 		}
 	}
 
+	outlet(OUT_SEND, 'bang');
 
 	// outDict.set('notes', notes);
 	//var dict = new Dict();
     //dict.parse(JSON.stringify({ notes: notes }));
 
-	outDict.parse(JSON.stringify({ notes: notes }));
+	// outDict.parse(JSON.stringify({ notes: notes }));
 
-    outlet(OUT_NOTES, 'dictionary', outDict.name);
+    // outlet(OUT_NOTES, 'dictionary', outDict.name);
 }
 
-// function isEuclideanBeat(step, offset, beats, steps)
-// {
-// 	return Math.abs(((step - offset) * beats) % steps) < beats;
-// }
+
 
 function is_euclid_beat(step, beats, steps)
 {
@@ -311,7 +369,7 @@ function list()
 
 		// make sure main and popup gui's are in sync...
 		// messnamed("gui", [channel, param, "set", value]);
-		outlet(2, [channel, param, "set", val]);
+		outlet(OUT_GUI, [channel, param, "set", val]);
 
 		update();
 
@@ -321,8 +379,8 @@ function list()
 	if (arguments.length === 4)
 	{
 		channel 	= arguments[0];
-		param 		= arguments[1];
-		var cmd		= arguments[2];
+		var cmd		= arguments[1];
+		param 		= arguments[2];
 		val			= arguments[3];
 
 		if (cmd !== "lock")
@@ -332,7 +390,17 @@ function list()
 		}
 
 		lock_set(channel, param, val);
+
+		return;
 	}
+
+	// if (arguments.length === 2)
+	// {
+	// 	if (arguments[0] === 'view')
+	// 	{
+	//
+	// 	}
+	// }
 }
 
 function update()

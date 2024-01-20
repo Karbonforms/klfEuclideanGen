@@ -81,7 +81,7 @@ function bang()
 		for (var mnn = 0; mnn < 128; mnn++)
 		{
 			api.id = drumpads[1+(mnn*2)];
-			var name = api.getstring("name");
+			var name = api.getstring("name").replaceAll('"', '');
 
 			if (!BASENAMES[mnn+1].endsWith(name))
 			{

@@ -5,13 +5,14 @@ include("core");
 
 autowatch = 1;
 inlets = 1;
-outlets = 5;
+outlets = 6;
 
-const OUT_DATA 	    = 0;
-const OUT_FINISH 	= 1;
-const OUT_RELOAD 	= 2;
-const OUT_GUI 	    = 3;
-const OUT_PRESETMENU= 4;
+const OUT_DATA 	        = 0;
+const OUT_FINISH 	    = 1;
+const OUT_RELOAD 	    = 2;
+const OUT_GUI 	        = 3;
+const OUT_PRESETMENU    = 4;
+const OUT_INDIE_LOCKS   = 5;
 
 setoutletassist(0, "data out");
 setoutletassist(1, "finished bang");
@@ -160,6 +161,14 @@ function channel(v)
     return arr;
 }
 
+function channel_plocks(v)
+{
+    var start = v * NUM_PARAMS;
+    var arr = locks.slice(start, start + NUM_PARAMS);
+    arr.unshift(v);
+    return arr;
+}
+
 function bang()
 {
     for (var ch = 0; ch < NUM_CHANNELS; ch++)
@@ -217,8 +226,7 @@ function list()
         }
 
         lock_set(ch, param, val);
-
-        return;
+        outlet(OUT_INDIE_LOCKS, channel_plocks(ch));
     }
 
     // if (arguments.length === 2)

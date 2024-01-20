@@ -10,6 +10,8 @@ var color_green = [0.00, 1.00, 0.00];
 var color_dgreen= [0.00, 0.40, 0.00];
 var color_blue  = [0.00, 0.07, 0.34];
 
+var size = 9;
+var selected = 0;
 var active_channels = Array(size);
 
 for (var i = 0; i < size; i++)
@@ -24,9 +26,6 @@ mgraphics.autofill = 0;
 
 var font = mgraphics.getfontlist()[0];
 mgraphics.select_font_face(font);
-
-var size = 9;
-var selected = 0;
 
 function list()
 {

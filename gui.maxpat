@@ -154,7 +154,14 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 459.302356243133545, 764.534934759140015, 128.0, 128.0 ],
-					"proportion" : 0.39
+					"proportion" : 0.39,
+					"saved_attribute_attributes" : 					{
+						"bgfillcolor" : 						{
+							"expression" : ""
+						}
+
+					}
+
 				}
 
 			}
@@ -251,7 +258,7 @@
 					"saved_attribute_attributes" : 					{
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "live.text[347]",
+							"parameter_longname" : "live.text[351]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[3]",
 							"parameter_type" : 2
@@ -470,7 +477,7 @@
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_initial" : [ 0 ],
 											"parameter_initial_enable" : 1,
-											"parameter_longname" : "live.text[186]",
+											"parameter_longname" : "live.text[349]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text",
 											"parameter_type" : 2
@@ -638,7 +645,7 @@
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
-											"parameter_longname" : "live.text[180]",
+											"parameter_longname" : "live.text[2]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[2]",
 											"parameter_type" : 2
@@ -726,7 +733,7 @@
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_info" : "Randomise main parameters EXCEPT Steps.",
-											"parameter_longname" : "live.text[184]",
+											"parameter_longname" : "live.text[83]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[1]",
 											"parameter_type" : 2
@@ -771,7 +778,7 @@
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_info" : "Randomise main parameters, including possibility of irrational Steps.  Only one random 'irrational' amount of Steps is (possibly) created, then randomly applied to a channel.",
-											"parameter_longname" : "live.text[185]",
+											"parameter_longname" : "live.text[84]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[1]",
 											"parameter_type" : 2
@@ -836,6 +843,10 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 839.0, 342.25, 239.0, 20.0 ],
 									"saved_attribute_attributes" : 									{
+										"bgcolor" : 										{
+											"expression" : ""
+										}
+,
 										"textoncolor" : 										{
 											"expression" : "themecolor.live_lcd_control_fg"
 										}
@@ -1136,7 +1147,7 @@
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
-											"parameter_longname" : "live.text[181]",
+											"parameter_longname" : "live.text[86]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[3]",
 											"parameter_type" : 2
@@ -1164,7 +1175,7 @@
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
-											"parameter_longname" : "live.text[182]",
+											"parameter_longname" : "live.text[87]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[3]",
 											"parameter_type" : 2
@@ -1227,7 +1238,7 @@
 											"parameter_initial" : [ 0.0 ],
 											"parameter_initial_enable" : 1,
 											"parameter_invisible" : 2,
-											"parameter_longname" : "live.text[183]",
+											"parameter_longname" : "live.text[88]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text",
 											"parameter_type" : 2
@@ -1773,7 +1784,14 @@
 									"patching_rect" : [ 39.0, 691.0, 128.0, 128.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 2.0, 342.25, 331.0, 48.0 ],
-									"proportion" : 0.39
+									"proportion" : 0.39,
+									"saved_attribute_attributes" : 									{
+										"bgfillcolor" : 										{
+											"expression" : ""
+										}
+
+									}
+
 								}
 
 							}
@@ -2377,6 +2395,41 @@
 						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
+									"id" : "obj-6",
+									"maxclass" : "newobj",
+									"numinlets" : 1,
+									"numoutlets" : 0,
+									"patching_rect" : [ 1133.0, 97.0, 96.0, 22.0 ],
+									"text" : "print pop_plocks"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-25",
+									"maxclass" : "newobj",
+									"numinlets" : 10,
+									"numoutlets" : 10,
+									"outlettype" : [ "", "", "", "", "", "", "", "", "", "" ],
+									"patching_rect" : [ 984.0, 117.0, 126.0, 22.0 ],
+									"text" : "route 0 1 2 3 4 5 6 7 8"
+								}
+
+							}
+, 							{
+								"box" : 								{
+									"id" : "obj-21",
+									"maxclass" : "newobj",
+									"numinlets" : 0,
+									"numoutlets" : 1,
+									"outlettype" : [ "" ],
+									"patching_rect" : [ 984.0, 66.0, 97.0, 22.0 ],
+									"text" : "r ---ind_plocks"
+								}
+
+							}
+, 							{
+								"box" : 								{
 									"id" : "obj-49",
 									"maxclass" : "newobj",
 									"numinlets" : 1,
@@ -2452,7 +2505,7 @@
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_initial" : [ 0 ],
 											"parameter_initial_enable" : 1,
-											"parameter_longname" : "live.text[292]",
+											"parameter_longname" : "live.text[283]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text",
 											"parameter_type" : 2
@@ -2503,7 +2556,7 @@
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_info" : "Randomise main parameters including Steps.",
-											"parameter_longname" : "live.text[291]",
+											"parameter_longname" : "live.text[284]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[1]",
 											"parameter_type" : 2
@@ -2543,7 +2596,7 @@
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_initial" : [ 0 ],
 											"parameter_initial_enable" : 1,
-											"parameter_longname" : "live.text[295]",
+											"parameter_longname" : "live.text[285]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text",
 											"parameter_type" : 2
@@ -2590,7 +2643,7 @@
 ,
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
-											"parameter_longname" : "live.text[299]",
+											"parameter_longname" : "live.text[286]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[1]",
 											"parameter_type" : 2
@@ -2687,7 +2740,7 @@
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
-											"parameter_longname" : "live.text[294]",
+											"parameter_longname" : "live.text[287]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[2]",
 											"parameter_type" : 2
@@ -2775,7 +2828,7 @@
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_info" : "Randomise main parameters EXCEPT Steps.",
-											"parameter_longname" : "live.text[300]",
+											"parameter_longname" : "live.text[288]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[1]",
 											"parameter_type" : 2
@@ -2820,7 +2873,7 @@
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
 											"parameter_info" : "Randomise main parameters, including possibility of irrational Steps.  Only one random 'irrational' amount of Steps is (possibly) created, then randomly applied to a channel.",
-											"parameter_longname" : "live.text[296]",
+											"parameter_longname" : "live.text[289]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[1]",
 											"parameter_type" : 2
@@ -2886,6 +2939,10 @@
 									"presentation" : 1,
 									"presentation_rect" : [ 668.0, 408.0, 192.0, 20.0 ],
 									"saved_attribute_attributes" : 									{
+										"bgcolor" : 										{
+											"expression" : ""
+										}
+,
 										"textoncolor" : 										{
 											"expression" : "themecolor.live_lcd_control_fg"
 										}
@@ -2912,7 +2969,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -2937,7 +2994,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -2962,7 +3019,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -2987,7 +3044,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -3012,7 +3069,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -3037,7 +3094,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -3062,7 +3119,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -3087,7 +3144,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -3112,7 +3169,7 @@
 									"lockedsize" : 0,
 									"maxclass" : "bpatcher",
 									"name" : "big_nob_channel_gui.maxpat",
-									"numinlets" : 1,
+									"numinlets" : 2,
 									"numoutlets" : 1,
 									"offset" : [ 0.0, 0.0 ],
 									"outlettype" : [ "list" ],
@@ -3186,7 +3243,7 @@
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
-											"parameter_longname" : "live.text[293]",
+											"parameter_longname" : "live.text[290]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[3]",
 											"parameter_type" : 2
@@ -3214,7 +3271,7 @@
 									"saved_attribute_attributes" : 									{
 										"valueof" : 										{
 											"parameter_enum" : [ "val1", "val2" ],
-											"parameter_longname" : "live.text[297]",
+											"parameter_longname" : "live.text[291]",
 											"parameter_mmax" : 1,
 											"parameter_shortname" : "live.text[3]",
 											"parameter_type" : 2
@@ -3723,7 +3780,14 @@
 									"patching_rect" : [ 39.0, 691.0, 128.0, 128.0 ],
 									"presentation" : 1,
 									"presentation_rect" : [ 1.0, 408.0, 206.0, 48.0 ],
-									"proportion" : 0.39
+									"proportion" : 0.39,
+									"saved_attribute_attributes" : 									{
+										"bgfillcolor" : 										{
+											"expression" : ""
+										}
+
+									}
+
 								}
 
 							}
@@ -3857,8 +3921,87 @@
 							}
 , 							{
 								"patchline" : 								{
+									"destination" : [ "obj-25", 0 ],
+									"order" : 1,
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-6", 0 ],
+									"order" : 0,
+									"source" : [ "obj-21", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
 									"destination" : [ "obj-15", 0 ],
 									"source" : [ "obj-24", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-1", 1 ],
+									"source" : [ "obj-25", 1 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-11", 1 ],
+									"source" : [ "obj-25", 4 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-2", 1 ],
+									"source" : [ "obj-25", 0 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-28", 1 ],
+									"source" : [ "obj-25", 5 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-3", 1 ],
+									"source" : [ "obj-25", 2 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-38", 1 ],
+									"source" : [ "obj-25", 8 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-4", 1 ],
+									"source" : [ "obj-25", 3 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-8", 1 ],
+									"source" : [ "obj-25", 7 ]
+								}
+
+							}
+, 							{
+								"patchline" : 								{
+									"destination" : [ "obj-9", 1 ],
+									"source" : [ "obj-25", 6 ]
 								}
 
 							}
@@ -4287,7 +4430,7 @@
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_info" : "Randomise main parameters including Steps.",
-							"parameter_longname" : "live.text[306]",
+							"parameter_longname" : "live.text[282]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[1]",
 							"parameter_type" : 2
@@ -4304,7 +4447,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-6",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "inlet",
 					"numinlets" : 0,
 					"numoutlets" : 1,
@@ -4329,7 +4472,7 @@
 				"box" : 				{
 					"comment" : "",
 					"id" : "obj-5",
-					"index" : 0,
+					"index" : 1,
 					"maxclass" : "outlet",
 					"numinlets" : 1,
 					"numoutlets" : 0,
@@ -4419,7 +4562,7 @@
 ,
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
-							"parameter_longname" : "live.text[309]",
+							"parameter_longname" : "live.text[162]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[1]",
 							"parameter_type" : 2
@@ -4452,7 +4595,7 @@
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_invisible" : 2,
-							"parameter_longname" : "live.text[303]",
+							"parameter_longname" : "live.text[350]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[26]",
 							"parameter_type" : 2
@@ -4468,12 +4611,12 @@
 			}
 , 			{
 				"box" : 				{
-					"activebgcolor" : [ 0.094117647058824, 0.094117647058824, 0.094117647058824, 1.0 ],
-					"activebgoncolor" : [ 0.094117647058824, 0.094117647058824, 0.094117647058824, 1.0 ],
+					"activebgcolor" : [ 0.074509803921569, 0.054901960784314, 0.043137254901961, 1.0 ],
+					"activebgoncolor" : [ 0.074509803921569, 0.054901960784314, 0.043137254901961, 1.0 ],
 					"activetextcolor" : [ 1.0, 0.67843137254902, 0.337254901960784, 1.0 ],
 					"activetextoncolor" : [ 0.011764705882353, 0.764705882352941, 0.835294117647059, 1.0 ],
-					"bgcolor" : [ 0.094117647058824, 0.094117647058824, 0.094117647058824, 1.0 ],
-					"bgoncolor" : [ 0.094117647058824, 0.094117647058824, 0.094117647058824, 1.0 ],
+					"bgcolor" : [ 0.074509803921569, 0.054901960784314, 0.043137254901961, 1.0 ],
+					"bgoncolor" : [ 0.074509803921569, 0.054901960784314, 0.043137254901961, 1.0 ],
 					"fontsize" : 8.0,
 					"hint" : "Get Note Names",
 					"id" : "obj-57",
@@ -4521,7 +4664,7 @@
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_initial" : [ 0 ],
 							"parameter_invisible" : 2,
-							"parameter_longname" : "live.text[304]",
+							"parameter_longname" : "live.text[47]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[4]",
 							"parameter_type" : 2
@@ -4530,7 +4673,7 @@
 					}
 ,
 					"text" : "BACK",
-					"textcolor" : [ 0.525490196078431, 0.525490196078431, 0.525490196078431, 1.0 ],
+					"textcolor" : [ 0.713725490196078, 0.658823529411765, 0.588235294117647, 1.0 ],
 					"usesvgviewbox" : 1,
 					"varname" : "live.text[2]"
 				}
@@ -4620,7 +4763,7 @@
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_info" : "Randomise main parameters EXCEPT Steps.",
-							"parameter_longname" : "live.text[308]",
+							"parameter_longname" : "live.text[160]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[1]",
 							"parameter_type" : 2
@@ -4653,7 +4796,7 @@
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_info" : "Randomise main parameters, including possibility of irrational Steps.\n\nOnly one random 'irrational' amount of Steps is (possibly) created, then randomly applied to a channel.",
-							"parameter_longname" : "live.text[305]",
+							"parameter_longname" : "live.text[199]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[1]",
 							"parameter_type" : 2
@@ -4815,7 +4958,7 @@
 						"valueof" : 						{
 							"parameter_enum" : [ "val1", "val2" ],
 							"parameter_invisible" : 2,
-							"parameter_longname" : "live.text[310]",
+							"parameter_longname" : "live.text[158]",
 							"parameter_mmax" : 1,
 							"parameter_shortname" : "live.text[3]",
 							"parameter_type" : 2
@@ -5318,2230 +5461,7 @@
 				}
 
 			}
- ],
-		"parameters" : 		{
-			"obj-12" : [ "live.text[270]", "live.text", 0 ],
-			"obj-14::obj-10" : [ "live.text[181]", "live.text[3]", 0 ],
-			"obj-14::obj-112" : [ "live.text[271]", "live.text[1]", 0 ],
-			"obj-14::obj-11::obj-1" : [ "live.text[145]", "live.text[1]", 0 ],
-			"obj-14::obj-11::obj-10" : [ "live.text[142]", "live.text", 0 ],
-			"obj-14::obj-11::obj-11" : [ "live.text[147]", "live.text", 0 ],
-			"obj-14::obj-11::obj-12" : [ "live.text[140]", "live.text[2]", 0 ],
-			"obj-14::obj-11::obj-13" : [ "live.text[149]", "live.text", 0 ],
-			"obj-14::obj-11::obj-16" : [ "live.text[141]", "live.text", 0 ],
-			"obj-14::obj-11::obj-23" : [ "live.numbox[171]", "live.numbox[8]", 0 ],
-			"obj-14::obj-11::obj-36" : [ "live.text[146]", "live.text", 0 ],
-			"obj-14::obj-11::obj-49" : [ "live.dial[18]", "live.numbox[2]", 0 ],
-			"obj-14::obj-11::obj-5" : [ "live.text[144]", "live.text", 0 ],
-			"obj-14::obj-11::obj-59" : [ "beats1[21]", "live.numbox[2]", 0 ],
-			"obj-14::obj-11::obj-6" : [ "live.text[148]", "live.text", 0 ],
-			"obj-14::obj-11::obj-60" : [ "offset1[46]", "live.numbox[2]", 0 ],
-			"obj-14::obj-11::obj-64" : [ "Trig Note 1[15]", "Trig Note 1", 0 ],
-			"obj-14::obj-11::obj-72" : [ "offset1[45]", "live.numbox[2]", 0 ],
-			"obj-14::obj-11::obj-76" : [ "offset1[44]", "live.numbox[2]", 0 ],
-			"obj-14::obj-11::obj-8" : [ "live.text[143]", "live.text", 0 ],
-			"obj-14::obj-11::obj-81" : [ "live.numbox[173]", "live.numbox", 0 ],
-			"obj-14::obj-11::obj-85" : [ "live.numbox[172]", "live.numbox", 0 ],
-			"obj-14::obj-13" : [ "live.tab[3]", "live.tab", 0 ],
-			"obj-14::obj-19" : [ "live.text[183]", "live.text", 0 ],
-			"obj-14::obj-1::obj-1" : [ "live.text[99]", "live.text[1]", 0 ],
-			"obj-14::obj-1::obj-10" : [ "live.text[98]", "live.text", 0 ],
-			"obj-14::obj-1::obj-11" : [ "live.text[97]", "live.text", 0 ],
-			"obj-14::obj-1::obj-12" : [ "live.text[94]", "live.text[2]", 0 ],
-			"obj-14::obj-1::obj-13" : [ "live.text[92]", "live.text", 0 ],
-			"obj-14::obj-1::obj-16" : [ "live.text[93]", "live.text", 0 ],
-			"obj-14::obj-1::obj-23" : [ "live.numbox[156]", "live.numbox[8]", 0 ],
-			"obj-14::obj-1::obj-36" : [ "live.text[91]", "live.text", 0 ],
-			"obj-14::obj-1::obj-49" : [ "live.dial[13]", "live.numbox[2]", 0 ],
-			"obj-14::obj-1::obj-5" : [ "live.text[95]", "live.text", 0 ],
-			"obj-14::obj-1::obj-59" : [ "beats1[6]", "live.numbox[2]", 0 ],
-			"obj-14::obj-1::obj-6" : [ "live.text[90]", "live.text", 0 ],
-			"obj-14::obj-1::obj-60" : [ "offset1[20]", "live.numbox[2]", 0 ],
-			"obj-14::obj-1::obj-64" : [ "Trig Note 1[10]", "Trig Note 1", 0 ],
-			"obj-14::obj-1::obj-72" : [ "offset1[21]", "live.numbox[2]", 0 ],
-			"obj-14::obj-1::obj-76" : [ "offset1[19]", "live.numbox[2]", 0 ],
-			"obj-14::obj-1::obj-8" : [ "live.text[96]", "live.text", 0 ],
-			"obj-14::obj-1::obj-81" : [ "live.numbox[158]", "live.numbox", 0 ],
-			"obj-14::obj-1::obj-85" : [ "live.numbox[157]", "live.numbox", 0 ],
-			"obj-14::obj-24" : [ "live.text[180]", "live.text[2]", 0 ],
-			"obj-14::obj-28::obj-1" : [ "live.text[134]", "live.text[1]", 0 ],
-			"obj-14::obj-28::obj-10" : [ "live.text[130]", "live.text", 0 ],
-			"obj-14::obj-28::obj-11" : [ "live.text[138]", "live.text", 0 ],
-			"obj-14::obj-28::obj-12" : [ "live.text[136]", "live.text[2]", 0 ],
-			"obj-14::obj-28::obj-13" : [ "live.text[133]", "live.text", 0 ],
-			"obj-14::obj-28::obj-16" : [ "live.text[135]", "live.text", 0 ],
-			"obj-14::obj-28::obj-23" : [ "live.numbox[168]", "live.numbox[8]", 0 ],
-			"obj-14::obj-28::obj-36" : [ "live.text[139]", "live.text", 0 ],
-			"obj-14::obj-28::obj-49" : [ "live.dial[17]", "live.numbox[2]", 0 ],
-			"obj-14::obj-28::obj-5" : [ "live.text[137]", "live.text", 0 ],
-			"obj-14::obj-28::obj-59" : [ "beats1[20]", "live.numbox[2]", 0 ],
-			"obj-14::obj-28::obj-6" : [ "live.text[131]", "live.text", 0 ],
-			"obj-14::obj-28::obj-60" : [ "offset1[42]", "live.numbox[2]", 0 ],
-			"obj-14::obj-28::obj-64" : [ "Trig Note 1[14]", "Trig Note 1", 0 ],
-			"obj-14::obj-28::obj-72" : [ "offset1[41]", "live.numbox[2]", 0 ],
-			"obj-14::obj-28::obj-76" : [ "offset1[43]", "live.numbox[2]", 0 ],
-			"obj-14::obj-28::obj-8" : [ "live.text[132]", "live.text", 0 ],
-			"obj-14::obj-28::obj-81" : [ "live.numbox[170]", "live.numbox", 0 ],
-			"obj-14::obj-28::obj-85" : [ "live.numbox[169]", "live.numbox", 0 ],
-			"obj-14::obj-2::obj-1" : [ "live.text[105]", "live.text[1]", 0 ],
-			"obj-14::obj-2::obj-10" : [ "live.text[101]", "live.text", 0 ],
-			"obj-14::obj-2::obj-11" : [ "live.text[103]", "live.text", 0 ],
-			"obj-14::obj-2::obj-12" : [ "live.text[108]", "live.text[2]", 0 ],
-			"obj-14::obj-2::obj-13" : [ "live.text[109]", "live.text", 0 ],
-			"obj-14::obj-2::obj-16" : [ "live.text[104]", "live.text", 0 ],
-			"obj-14::obj-2::obj-23" : [ "live.numbox[161]", "live.numbox[8]", 0 ],
-			"obj-14::obj-2::obj-36" : [ "live.text[107]", "live.text", 0 ],
-			"obj-14::obj-2::obj-49" : [ "live.dial[14]", "live.numbox[2]", 0 ],
-			"obj-14::obj-2::obj-5" : [ "live.text[100]", "live.text", 0 ],
-			"obj-14::obj-2::obj-59" : [ "beats1[7]", "live.numbox[2]", 0 ],
-			"obj-14::obj-2::obj-6" : [ "live.text[102]", "live.text", 0 ],
-			"obj-14::obj-2::obj-60" : [ "offset1[23]", "live.numbox[2]", 0 ],
-			"obj-14::obj-2::obj-64" : [ "Trig Note 1[11]", "Trig Note 1", 0 ],
-			"obj-14::obj-2::obj-72" : [ "offset1[24]", "live.numbox[2]", 0 ],
-			"obj-14::obj-2::obj-76" : [ "offset1[22]", "live.numbox[2]", 0 ],
-			"obj-14::obj-2::obj-8" : [ "live.text[106]", "live.text", 0 ],
-			"obj-14::obj-2::obj-81" : [ "live.numbox[159]", "live.numbox", 0 ],
-			"obj-14::obj-2::obj-85" : [ "live.numbox[160]", "live.numbox", 0 ],
-			"obj-14::obj-30" : [ "live.text[182]", "live.text[3]", 0 ],
-			"obj-14::obj-35" : [ "live.text[186]", "live.text", 0 ],
-			"obj-14::obj-38::obj-1" : [ "live.text[179]", "live.text[1]", 0 ],
-			"obj-14::obj-38::obj-10" : [ "live.text[174]", "live.text", 0 ],
-			"obj-14::obj-38::obj-11" : [ "live.text[171]", "live.text", 0 ],
-			"obj-14::obj-38::obj-12" : [ "live.text[173]", "live.text[2]", 0 ],
-			"obj-14::obj-38::obj-13" : [ "live.text[175]", "live.text", 0 ],
-			"obj-14::obj-38::obj-16" : [ "live.text[170]", "live.text", 0 ],
-			"obj-14::obj-38::obj-23" : [ "live.numbox[180]", "live.numbox[8]", 0 ],
-			"obj-14::obj-38::obj-36" : [ "live.text[177]", "live.text", 0 ],
-			"obj-14::obj-38::obj-49" : [ "live.dial[21]", "live.numbox[2]", 0 ],
-			"obj-14::obj-38::obj-5" : [ "live.text[176]", "live.text", 0 ],
-			"obj-14::obj-38::obj-59" : [ "beats1[24]", "live.numbox[2]", 0 ],
-			"obj-14::obj-38::obj-6" : [ "live.text[172]", "live.text", 0 ],
-			"obj-14::obj-38::obj-60" : [ "offset1[55]", "live.numbox[2]", 0 ],
-			"obj-14::obj-38::obj-64" : [ "Trig Note 1[18]", "Trig Note 1", 0 ],
-			"obj-14::obj-38::obj-72" : [ "offset1[53]", "live.numbox[2]", 0 ],
-			"obj-14::obj-38::obj-76" : [ "offset1[54]", "live.numbox[2]", 0 ],
-			"obj-14::obj-38::obj-8" : [ "live.text[178]", "live.text", 0 ],
-			"obj-14::obj-38::obj-81" : [ "live.numbox[181]", "live.numbox", 0 ],
-			"obj-14::obj-38::obj-85" : [ "live.numbox[182]", "live.numbox", 0 ],
-			"obj-14::obj-3::obj-1" : [ "live.text[119]", "live.text[1]", 0 ],
-			"obj-14::obj-3::obj-10" : [ "live.text[112]", "live.text", 0 ],
-			"obj-14::obj-3::obj-11" : [ "live.text[111]", "live.text", 0 ],
-			"obj-14::obj-3::obj-12" : [ "live.text[113]", "live.text[2]", 0 ],
-			"obj-14::obj-3::obj-13" : [ "live.text[110]", "live.text", 0 ],
-			"obj-14::obj-3::obj-16" : [ "live.text[118]", "live.text", 0 ],
-			"obj-14::obj-3::obj-23" : [ "live.numbox[164]", "live.numbox[8]", 0 ],
-			"obj-14::obj-3::obj-36" : [ "live.text[114]", "live.text", 0 ],
-			"obj-14::obj-3::obj-49" : [ "live.dial[15]", "live.numbox[2]", 0 ],
-			"obj-14::obj-3::obj-5" : [ "live.text[116]", "live.text", 0 ],
-			"obj-14::obj-3::obj-59" : [ "beats1[18]", "live.numbox[2]", 0 ],
-			"obj-14::obj-3::obj-6" : [ "live.text[117]", "live.text", 0 ],
-			"obj-14::obj-3::obj-60" : [ "offset1[35]", "live.numbox[2]", 0 ],
-			"obj-14::obj-3::obj-64" : [ "Trig Note 1[12]", "Trig Note 1", 0 ],
-			"obj-14::obj-3::obj-72" : [ "offset1[37]", "live.numbox[2]", 0 ],
-			"obj-14::obj-3::obj-76" : [ "offset1[36]", "live.numbox[2]", 0 ],
-			"obj-14::obj-3::obj-8" : [ "live.text[115]", "live.text", 0 ],
-			"obj-14::obj-3::obj-81" : [ "live.numbox[162]", "live.numbox", 0 ],
-			"obj-14::obj-3::obj-85" : [ "live.numbox[163]", "live.numbox", 0 ],
-			"obj-14::obj-4::obj-1" : [ "live.text[129]", "live.text[1]", 0 ],
-			"obj-14::obj-4::obj-10" : [ "live.text[126]", "live.text", 0 ],
-			"obj-14::obj-4::obj-11" : [ "live.text[124]", "live.text", 0 ],
-			"obj-14::obj-4::obj-12" : [ "live.text[122]", "live.text[2]", 0 ],
-			"obj-14::obj-4::obj-13" : [ "live.text[128]", "live.text", 0 ],
-			"obj-14::obj-4::obj-16" : [ "live.text[123]", "live.text", 0 ],
-			"obj-14::obj-4::obj-23" : [ "live.numbox[167]", "live.numbox[8]", 0 ],
-			"obj-14::obj-4::obj-36" : [ "live.text[125]", "live.text", 0 ],
-			"obj-14::obj-4::obj-49" : [ "live.dial[16]", "live.numbox[2]", 0 ],
-			"obj-14::obj-4::obj-5" : [ "live.text[121]", "live.text", 0 ],
-			"obj-14::obj-4::obj-59" : [ "beats1[19]", "live.numbox[2]", 0 ],
-			"obj-14::obj-4::obj-6" : [ "live.text[120]", "live.text", 0 ],
-			"obj-14::obj-4::obj-60" : [ "offset1[38]", "live.numbox[2]", 0 ],
-			"obj-14::obj-4::obj-64" : [ "Trig Note 1[13]", "Trig Note 1", 0 ],
-			"obj-14::obj-4::obj-72" : [ "offset1[39]", "live.numbox[2]", 0 ],
-			"obj-14::obj-4::obj-76" : [ "offset1[40]", "live.numbox[2]", 0 ],
-			"obj-14::obj-4::obj-8" : [ "live.text[127]", "live.text", 0 ],
-			"obj-14::obj-4::obj-81" : [ "live.numbox[166]", "live.numbox", 0 ],
-			"obj-14::obj-4::obj-85" : [ "live.numbox[165]", "live.numbox", 0 ],
-			"obj-14::obj-57" : [ "live.text[281]", "live.text[1]", 0 ],
-			"obj-14::obj-58" : [ "live.text[207]", "live.text", 0 ],
-			"obj-14::obj-62" : [ "live.text[185]", "live.text[1]", 0 ],
-			"obj-14::obj-64" : [ "live.text[184]", "live.text[1]", 0 ],
-			"obj-14::obj-8::obj-1" : [ "live.text[162]", "live.text[1]", 0 ],
-			"obj-14::obj-8::obj-10" : [ "live.text[166]", "live.text", 0 ],
-			"obj-14::obj-8::obj-11" : [ "live.text[161]", "live.text", 0 ],
-			"obj-14::obj-8::obj-12" : [ "live.text[169]", "live.text[2]", 0 ],
-			"obj-14::obj-8::obj-13" : [ "live.text[165]", "live.text", 0 ],
-			"obj-14::obj-8::obj-16" : [ "live.text[163]", "live.text", 0 ],
-			"obj-14::obj-8::obj-23" : [ "live.numbox[178]", "live.numbox[8]", 0 ],
-			"obj-14::obj-8::obj-36" : [ "live.text[164]", "live.text", 0 ],
-			"obj-14::obj-8::obj-49" : [ "live.dial[20]", "live.numbox[2]", 0 ],
-			"obj-14::obj-8::obj-5" : [ "live.text[167]", "live.text", 0 ],
-			"obj-14::obj-8::obj-59" : [ "beats1[23]", "live.numbox[2]", 0 ],
-			"obj-14::obj-8::obj-6" : [ "live.text[160]", "live.text", 0 ],
-			"obj-14::obj-8::obj-60" : [ "offset1[50]", "live.numbox[2]", 0 ],
-			"obj-14::obj-8::obj-64" : [ "Trig Note 1[17]", "Trig Note 1", 0 ],
-			"obj-14::obj-8::obj-72" : [ "offset1[52]", "live.numbox[2]", 0 ],
-			"obj-14::obj-8::obj-76" : [ "offset1[51]", "live.numbox[2]", 0 ],
-			"obj-14::obj-8::obj-8" : [ "live.text[168]", "live.text", 0 ],
-			"obj-14::obj-8::obj-81" : [ "live.numbox[177]", "live.numbox", 0 ],
-			"obj-14::obj-8::obj-85" : [ "live.numbox[179]", "live.numbox", 0 ],
-			"obj-14::obj-9::obj-1" : [ "live.text[158]", "live.text[1]", 0 ],
-			"obj-14::obj-9::obj-10" : [ "live.text[153]", "live.text", 0 ],
-			"obj-14::obj-9::obj-11" : [ "live.text[151]", "live.text", 0 ],
-			"obj-14::obj-9::obj-12" : [ "live.text[159]", "live.text[2]", 0 ],
-			"obj-14::obj-9::obj-13" : [ "live.text[150]", "live.text", 0 ],
-			"obj-14::obj-9::obj-16" : [ "live.text[157]", "live.text", 0 ],
-			"obj-14::obj-9::obj-23" : [ "live.numbox[175]", "live.numbox[8]", 0 ],
-			"obj-14::obj-9::obj-36" : [ "live.text[156]", "live.text", 0 ],
-			"obj-14::obj-9::obj-49" : [ "live.dial[19]", "live.numbox[2]", 0 ],
-			"obj-14::obj-9::obj-5" : [ "live.text[152]", "live.text", 0 ],
-			"obj-14::obj-9::obj-59" : [ "beats1[22]", "live.numbox[2]", 0 ],
-			"obj-14::obj-9::obj-6" : [ "live.text[155]", "live.text", 0 ],
-			"obj-14::obj-9::obj-60" : [ "offset1[47]", "live.numbox[2]", 0 ],
-			"obj-14::obj-9::obj-64" : [ "Trig Note 1[16]", "Trig Note 1", 0 ],
-			"obj-14::obj-9::obj-72" : [ "offset1[48]", "live.numbox[2]", 0 ],
-			"obj-14::obj-9::obj-76" : [ "offset1[49]", "live.numbox[2]", 0 ],
-			"obj-14::obj-9::obj-8" : [ "live.text[154]", "live.text", 0 ],
-			"obj-14::obj-9::obj-81" : [ "live.numbox[176]", "live.numbox", 0 ],
-			"obj-14::obj-9::obj-85" : [ "live.numbox[174]", "live.numbox", 0 ],
-			"obj-156" : [ "live.text[309]", "live.text[1]", 0 ],
-			"obj-20::obj-10" : [ "live.text[293]", "live.text[3]", 0 ],
-			"obj-20::obj-112" : [ "live.text[299]", "live.text[1]", 0 ],
-			"obj-20::obj-11::obj-1" : [ "live.text[239]", "live.text[1]", 0 ],
-			"obj-20::obj-11::obj-10" : [ "live.text[241]", "live.text", 0 ],
-			"obj-20::obj-11::obj-12" : [ "live.text[238]", "live.text[2]", 0 ],
-			"obj-20::obj-11::obj-23" : [ "live.numbox[128]", "live.numbox[8]", 0 ],
-			"obj-20::obj-11::obj-42::obj-10" : [ "live.text[233]", "live.text", 0 ],
-			"obj-20::obj-11::obj-42::obj-22" : [ "live.numbox[120]", "live.numbox", 0 ],
-			"obj-20::obj-11::obj-42::obj-49" : [ "live.dial[52]", "STEPS", 0 ],
-			"obj-20::obj-11::obj-43::obj-10" : [ "live.text[234]", "live.text", 0 ],
-			"obj-20::obj-11::obj-43::obj-22" : [ "live.numbox[121]", "live.numbox", 0 ],
-			"obj-20::obj-11::obj-43::obj-49" : [ "live.dial[53]", "STEPS", 0 ],
-			"obj-20::obj-11::obj-44::obj-10" : [ "live.text[235]", "live.text", 0 ],
-			"obj-20::obj-11::obj-44::obj-22" : [ "live.numbox[122]", "live.numbox", 0 ],
-			"obj-20::obj-11::obj-44::obj-49" : [ "live.dial[54]", "STEPS", 0 ],
-			"obj-20::obj-11::obj-45::obj-10" : [ "live.text[236]", "live.text", 0 ],
-			"obj-20::obj-11::obj-45::obj-22" : [ "live.numbox[123]", "live.numbox", 0 ],
-			"obj-20::obj-11::obj-45::obj-49" : [ "live.dial[55]", "STEPS", 0 ],
-			"obj-20::obj-11::obj-46::obj-10" : [ "live.text[237]", "live.text", 0 ],
-			"obj-20::obj-11::obj-46::obj-22" : [ "live.numbox[124]", "live.numbox", 0 ],
-			"obj-20::obj-11::obj-46::obj-49" : [ "live.dial[56]", "STEPS", 0 ],
-			"obj-20::obj-11::obj-5" : [ "live.text[240]", "live.text", 0 ],
-			"obj-20::obj-11::obj-64" : [ "Trig Note 1[24]", "Trig Note 1", 0 ],
-			"obj-20::obj-11::obj-81" : [ "live.numbox[127]", "live.numbox", 0 ],
-			"obj-20::obj-11::obj-85" : [ "live.numbox[125]", "live.numbox", 0 ],
-			"obj-20::obj-13" : [ "live.tab[5]", "live.tab", 0 ],
-			"obj-20::obj-1::obj-1" : [ "live.text[191]", "live.text[1]", 0 ],
-			"obj-20::obj-1::obj-10" : [ "live.text[194]", "live.text", 0 ],
-			"obj-20::obj-1::obj-12" : [ "live.text[192]", "live.text[2]", 0 ],
-			"obj-20::obj-1::obj-23" : [ "live.numbox[81]", "live.numbox[8]", 0 ],
-			"obj-20::obj-1::obj-42::obj-10" : [ "live.text[187]", "live.text", 0 ],
-			"obj-20::obj-1::obj-42::obj-22" : [ "live.numbox", "live.numbox", 0 ],
-			"obj-20::obj-1::obj-42::obj-49" : [ "live.dial[22]", "STEPS", 0 ],
-			"obj-20::obj-1::obj-43::obj-10" : [ "live.text[188]", "live.text", 0 ],
-			"obj-20::obj-1::obj-43::obj-22" : [ "live.numbox[76]", "live.numbox", 0 ],
-			"obj-20::obj-1::obj-43::obj-49" : [ "live.dial[23]", "STEPS", 0 ],
-			"obj-20::obj-1::obj-44::obj-10" : [ "live.text[272]", "live.text", 0 ],
-			"obj-20::obj-1::obj-44::obj-22" : [ "live.numbox[77]", "live.numbox", 0 ],
-			"obj-20::obj-1::obj-44::obj-49" : [ "live.dial[24]", "STEPS", 0 ],
-			"obj-20::obj-1::obj-45::obj-10" : [ "live.text[189]", "live.text", 0 ],
-			"obj-20::obj-1::obj-45::obj-22" : [ "live.numbox[78]", "live.numbox", 0 ],
-			"obj-20::obj-1::obj-45::obj-49" : [ "live.dial[25]", "STEPS", 0 ],
-			"obj-20::obj-1::obj-46::obj-10" : [ "live.text[190]", "live.text", 0 ],
-			"obj-20::obj-1::obj-46::obj-22" : [ "live.numbox[79]", "live.numbox", 0 ],
-			"obj-20::obj-1::obj-46::obj-49" : [ "live.dial[26]", "STEPS", 0 ],
-			"obj-20::obj-1::obj-5" : [ "live.text[193]", "live.text", 0 ],
-			"obj-20::obj-1::obj-64" : [ "Trig Note 1[19]", "Trig Note 1", 0 ],
-			"obj-20::obj-1::obj-81" : [ "live.numbox[80]", "live.numbox", 0 ],
-			"obj-20::obj-1::obj-85" : [ "live.numbox[83]", "live.numbox", 0 ],
-			"obj-20::obj-24" : [ "live.text[294]", "live.text[2]", 0 ],
-			"obj-20::obj-28::obj-1" : [ "live.text[230]", "live.text[1]", 0 ],
-			"obj-20::obj-28::obj-10" : [ "live.text[231]", "live.text", 0 ],
-			"obj-20::obj-28::obj-12" : [ "live.text[229]", "live.text[2]", 0 ],
-			"obj-20::obj-28::obj-23" : [ "live.numbox[118]", "live.numbox[8]", 0 ],
-			"obj-20::obj-28::obj-42::obj-10" : [ "live.text[224]", "live.text", 0 ],
-			"obj-20::obj-28::obj-42::obj-22" : [ "live.numbox[111]", "live.numbox", 0 ],
-			"obj-20::obj-28::obj-42::obj-49" : [ "live.dial[46]", "STEPS", 0 ],
-			"obj-20::obj-28::obj-43::obj-10" : [ "live.text[225]", "live.text", 0 ],
-			"obj-20::obj-28::obj-43::obj-22" : [ "live.numbox[112]", "live.numbox", 0 ],
-			"obj-20::obj-28::obj-43::obj-49" : [ "live.dial[47]", "STEPS", 0 ],
-			"obj-20::obj-28::obj-44::obj-10" : [ "live.text[226]", "live.text", 0 ],
-			"obj-20::obj-28::obj-44::obj-22" : [ "live.numbox[113]", "live.numbox", 0 ],
-			"obj-20::obj-28::obj-44::obj-49" : [ "live.dial[48]", "STEPS", 0 ],
-			"obj-20::obj-28::obj-45::obj-10" : [ "live.text[227]", "live.text", 0 ],
-			"obj-20::obj-28::obj-45::obj-22" : [ "live.numbox[114]", "live.numbox", 0 ],
-			"obj-20::obj-28::obj-45::obj-49" : [ "live.dial[49]", "STEPS", 0 ],
-			"obj-20::obj-28::obj-46::obj-10" : [ "live.text[228]", "live.text", 0 ],
-			"obj-20::obj-28::obj-46::obj-22" : [ "live.numbox[115]", "live.numbox", 0 ],
-			"obj-20::obj-28::obj-46::obj-49" : [ "live.dial[50]", "STEPS", 0 ],
-			"obj-20::obj-28::obj-5" : [ "live.text[232]", "live.text", 0 ],
-			"obj-20::obj-28::obj-64" : [ "Trig Note 1[23]", "Trig Note 1", 0 ],
-			"obj-20::obj-28::obj-81" : [ "live.numbox[116]", "live.numbox", 0 ],
-			"obj-20::obj-28::obj-85" : [ "live.numbox[117]", "live.numbox", 0 ],
-			"obj-20::obj-2::obj-1" : [ "live.text[203]", "live.text[1]", 0 ],
-			"obj-20::obj-2::obj-10" : [ "live.text[202]", "live.text", 0 ],
-			"obj-20::obj-2::obj-12" : [ "live.text[200]", "live.text[2]", 0 ],
-			"obj-20::obj-2::obj-23" : [ "live.numbox[89]", "live.numbox[8]", 0 ],
-			"obj-20::obj-2::obj-42::obj-10" : [ "live.text[195]", "live.text", 0 ],
-			"obj-20::obj-2::obj-42::obj-22" : [ "live.numbox[84]", "live.numbox", 0 ],
-			"obj-20::obj-2::obj-42::obj-49" : [ "live.dial[28]", "STEPS", 0 ],
-			"obj-20::obj-2::obj-43::obj-10" : [ "live.text[196]", "live.text", 0 ],
-			"obj-20::obj-2::obj-43::obj-22" : [ "live.numbox[85]", "live.numbox", 0 ],
-			"obj-20::obj-2::obj-43::obj-49" : [ "live.dial[29]", "STEPS", 0 ],
-			"obj-20::obj-2::obj-44::obj-10" : [ "live.text[197]", "live.text", 0 ],
-			"obj-20::obj-2::obj-44::obj-22" : [ "live.numbox[86]", "live.numbox", 0 ],
-			"obj-20::obj-2::obj-44::obj-49" : [ "live.dial[30]", "STEPS", 0 ],
-			"obj-20::obj-2::obj-45::obj-10" : [ "live.text[198]", "live.text", 0 ],
-			"obj-20::obj-2::obj-45::obj-22" : [ "live.numbox[87]", "live.numbox", 0 ],
-			"obj-20::obj-2::obj-45::obj-49" : [ "live.dial[31]", "STEPS", 0 ],
-			"obj-20::obj-2::obj-46::obj-10" : [ "live.text[199]", "live.text", 0 ],
-			"obj-20::obj-2::obj-46::obj-22" : [ "live.numbox[88]", "live.numbox", 0 ],
-			"obj-20::obj-2::obj-46::obj-49" : [ "live.dial[32]", "STEPS", 0 ],
-			"obj-20::obj-2::obj-5" : [ "live.text[201]", "live.text", 0 ],
-			"obj-20::obj-2::obj-64" : [ "Trig Note 1[20]", "Trig Note 1", 0 ],
-			"obj-20::obj-2::obj-81" : [ "live.numbox[90]", "live.numbox", 0 ],
-			"obj-20::obj-2::obj-85" : [ "live.numbox[92]", "live.numbox", 0 ],
-			"obj-20::obj-30" : [ "live.text[297]", "live.text[3]", 0 ],
-			"obj-20::obj-35" : [ "live.text[295]", "live.text", 0 ],
-			"obj-20::obj-38::obj-1" : [ "live.text[289]", "live.text[1]", 0 ],
-			"obj-20::obj-38::obj-10" : [ "live.text[290]", "live.text", 0 ],
-			"obj-20::obj-38::obj-12" : [ "live.text[288]", "live.text[2]", 0 ],
-			"obj-20::obj-38::obj-23" : [ "live.numbox[154]", "live.numbox[8]", 0 ],
-			"obj-20::obj-38::obj-42::obj-10" : [ "live.text[256]", "live.text", 0 ],
-			"obj-20::obj-38::obj-42::obj-22" : [ "live.numbox[147]", "live.numbox", 0 ],
-			"obj-20::obj-38::obj-42::obj-49" : [ "live.dial[70]", "STEPS", 0 ],
-			"obj-20::obj-38::obj-43::obj-10" : [ "live.text[257]", "live.text", 0 ],
-			"obj-20::obj-38::obj-43::obj-22" : [ "live.numbox[148]", "live.numbox", 0 ],
-			"obj-20::obj-38::obj-43::obj-49" : [ "live.dial[71]", "STEPS", 0 ],
-			"obj-20::obj-38::obj-44::obj-10" : [ "live.text[284]", "live.text", 0 ],
-			"obj-20::obj-38::obj-44::obj-22" : [ "live.numbox[149]", "live.numbox", 0 ],
-			"obj-20::obj-38::obj-44::obj-49" : [ "live.dial[72]", "STEPS", 0 ],
-			"obj-20::obj-38::obj-45::obj-10" : [ "live.text[285]", "live.text", 0 ],
-			"obj-20::obj-38::obj-45::obj-22" : [ "live.numbox[150]", "live.numbox", 0 ],
-			"obj-20::obj-38::obj-45::obj-49" : [ "live.dial[73]", "STEPS", 0 ],
-			"obj-20::obj-38::obj-46::obj-10" : [ "live.text[286]", "live.text", 0 ],
-			"obj-20::obj-38::obj-46::obj-22" : [ "live.numbox[151]", "live.numbox", 0 ],
-			"obj-20::obj-38::obj-46::obj-49" : [ "live.dial[74]", "STEPS", 0 ],
-			"obj-20::obj-38::obj-5" : [ "live.text[287]", "live.text", 0 ],
-			"obj-20::obj-38::obj-64" : [ "Trig Note 1[27]", "Trig Note 1", 0 ],
-			"obj-20::obj-38::obj-81" : [ "live.numbox[152]", "live.numbox", 0 ],
-			"obj-20::obj-38::obj-85" : [ "live.numbox[155]", "live.numbox", 0 ],
-			"obj-20::obj-3::obj-1" : [ "live.text[211]", "live.text[1]", 0 ],
-			"obj-20::obj-3::obj-10" : [ "live.text[212]", "live.text", 0 ],
-			"obj-20::obj-3::obj-12" : [ "live.text[214]", "live.text[2]", 0 ],
-			"obj-20::obj-3::obj-23" : [ "live.numbox[101]", "live.numbox[8]", 0 ],
-			"obj-20::obj-3::obj-42::obj-10" : [ "live.text[208]", "live.text", 0 ],
-			"obj-20::obj-3::obj-42::obj-22" : [ "live.numbox[93]", "live.numbox", 0 ],
-			"obj-20::obj-3::obj-42::obj-49" : [ "live.dial[34]", "STEPS", 0 ],
-			"obj-20::obj-3::obj-43::obj-10" : [ "live.text[204]", "live.text", 0 ],
-			"obj-20::obj-3::obj-43::obj-22" : [ "live.numbox[94]", "live.numbox", 0 ],
-			"obj-20::obj-3::obj-43::obj-49" : [ "live.dial[35]", "STEPS", 0 ],
-			"obj-20::obj-3::obj-44::obj-10" : [ "live.text[205]", "live.text", 0 ],
-			"obj-20::obj-3::obj-44::obj-22" : [ "live.numbox[95]", "live.numbox", 0 ],
-			"obj-20::obj-3::obj-44::obj-49" : [ "live.dial[36]", "STEPS", 0 ],
-			"obj-20::obj-3::obj-45::obj-10" : [ "live.text[209]", "live.text", 0 ],
-			"obj-20::obj-3::obj-45::obj-22" : [ "live.numbox[96]", "live.numbox", 0 ],
-			"obj-20::obj-3::obj-45::obj-49" : [ "live.dial[37]", "STEPS", 0 ],
-			"obj-20::obj-3::obj-46::obj-10" : [ "live.text[210]", "live.text", 0 ],
-			"obj-20::obj-3::obj-46::obj-22" : [ "live.numbox[97]", "live.numbox", 0 ],
-			"obj-20::obj-3::obj-46::obj-49" : [ "live.dial[38]", "STEPS", 0 ],
-			"obj-20::obj-3::obj-5" : [ "live.text[213]", "live.text", 0 ],
-			"obj-20::obj-3::obj-64" : [ "Trig Note 1[21]", "Trig Note 1", 0 ],
-			"obj-20::obj-3::obj-81" : [ "live.numbox[99]", "live.numbox", 0 ],
-			"obj-20::obj-3::obj-85" : [ "live.numbox[100]", "live.numbox", 0 ],
-			"obj-20::obj-4::obj-1" : [ "live.text[223]", "live.text[1]", 0 ],
-			"obj-20::obj-4::obj-10" : [ "live.text[220]", "live.text", 0 ],
-			"obj-20::obj-4::obj-12" : [ "live.text[221]", "live.text[2]", 0 ],
-			"obj-20::obj-4::obj-23" : [ "live.numbox[109]", "live.numbox[8]", 0 ],
-			"obj-20::obj-4::obj-42::obj-10" : [ "live.text[215]", "live.text", 0 ],
-			"obj-20::obj-4::obj-42::obj-22" : [ "live.numbox[102]", "live.numbox", 0 ],
-			"obj-20::obj-4::obj-42::obj-49" : [ "live.dial[40]", "STEPS", 0 ],
-			"obj-20::obj-4::obj-43::obj-10" : [ "live.text[216]", "live.text", 0 ],
-			"obj-20::obj-4::obj-43::obj-22" : [ "live.numbox[103]", "live.numbox", 0 ],
-			"obj-20::obj-4::obj-43::obj-49" : [ "live.dial[41]", "STEPS", 0 ],
-			"obj-20::obj-4::obj-44::obj-10" : [ "live.text[217]", "live.text", 0 ],
-			"obj-20::obj-4::obj-44::obj-22" : [ "live.numbox[104]", "live.numbox", 0 ],
-			"obj-20::obj-4::obj-44::obj-49" : [ "live.dial[42]", "STEPS", 0 ],
-			"obj-20::obj-4::obj-45::obj-10" : [ "live.text[218]", "live.text", 0 ],
-			"obj-20::obj-4::obj-45::obj-22" : [ "live.numbox[105]", "live.numbox", 0 ],
-			"obj-20::obj-4::obj-45::obj-49" : [ "live.dial[43]", "STEPS", 0 ],
-			"obj-20::obj-4::obj-46::obj-10" : [ "live.text[219]", "live.text", 0 ],
-			"obj-20::obj-4::obj-46::obj-22" : [ "live.numbox[106]", "live.numbox", 0 ],
-			"obj-20::obj-4::obj-46::obj-49" : [ "live.dial[44]", "STEPS", 0 ],
-			"obj-20::obj-4::obj-5" : [ "live.text[222]", "live.text", 0 ],
-			"obj-20::obj-4::obj-64" : [ "Trig Note 1[22]", "Trig Note 1", 0 ],
-			"obj-20::obj-4::obj-81" : [ "live.numbox[107]", "live.numbox", 0 ],
-			"obj-20::obj-4::obj-85" : [ "live.numbox[108]", "live.numbox", 0 ],
-			"obj-20::obj-57" : [ "live.text[291]", "live.text[1]", 0 ],
-			"obj-20::obj-58" : [ "live.text[292]", "live.text", 0 ],
-			"obj-20::obj-62" : [ "live.text[296]", "live.text[1]", 0 ],
-			"obj-20::obj-64" : [ "live.text[300]", "live.text[1]", 0 ],
-			"obj-20::obj-8::obj-1" : [ "live.text[283]", "live.text[1]", 0 ],
-			"obj-20::obj-8::obj-10" : [ "live.text[206]", "live.text", 0 ],
-			"obj-20::obj-8::obj-12" : [ "live.text[255]", "live.text[2]", 0 ],
-			"obj-20::obj-8::obj-23" : [ "live.numbox[145]", "live.numbox[8]", 0 ],
-			"obj-20::obj-8::obj-42::obj-10" : [ "live.text[251]", "live.text", 0 ],
-			"obj-20::obj-8::obj-42::obj-22" : [ "live.numbox[138]", "live.numbox", 0 ],
-			"obj-20::obj-8::obj-42::obj-49" : [ "live.dial[64]", "STEPS", 0 ],
-			"obj-20::obj-8::obj-43::obj-10" : [ "live.text[252]", "live.text", 0 ],
-			"obj-20::obj-8::obj-43::obj-22" : [ "live.numbox[139]", "live.numbox", 0 ],
-			"obj-20::obj-8::obj-43::obj-49" : [ "live.dial[65]", "STEPS", 0 ],
-			"obj-20::obj-8::obj-44::obj-10" : [ "live.text[253]", "live.text", 0 ],
-			"obj-20::obj-8::obj-44::obj-22" : [ "live.numbox[140]", "live.numbox", 0 ],
-			"obj-20::obj-8::obj-44::obj-49" : [ "live.dial[66]", "STEPS", 0 ],
-			"obj-20::obj-8::obj-45::obj-10" : [ "live.text[273]", "live.text", 0 ],
-			"obj-20::obj-8::obj-45::obj-22" : [ "live.numbox[141]", "live.numbox", 0 ],
-			"obj-20::obj-8::obj-45::obj-49" : [ "live.dial[67]", "STEPS", 0 ],
-			"obj-20::obj-8::obj-46::obj-10" : [ "live.text[282]", "live.text", 0 ],
-			"obj-20::obj-8::obj-46::obj-22" : [ "live.numbox[142]", "live.numbox", 0 ],
-			"obj-20::obj-8::obj-46::obj-49" : [ "live.dial[68]", "STEPS", 0 ],
-			"obj-20::obj-8::obj-5" : [ "live.text[254]", "live.text", 0 ],
-			"obj-20::obj-8::obj-64" : [ "Trig Note 1[26]", "Trig Note 1", 0 ],
-			"obj-20::obj-8::obj-81" : [ "live.numbox[143]", "live.numbox", 0 ],
-			"obj-20::obj-8::obj-85" : [ "live.numbox[146]", "live.numbox", 0 ],
-			"obj-20::obj-9::obj-1" : [ "live.text[249]", "live.text[1]", 0 ],
-			"obj-20::obj-9::obj-10" : [ "live.text[248]", "live.text", 0 ],
-			"obj-20::obj-9::obj-12" : [ "live.text[250]", "live.text[2]", 0 ],
-			"obj-20::obj-9::obj-23" : [ "live.numbox[135]", "live.numbox[8]", 0 ],
-			"obj-20::obj-9::obj-42::obj-10" : [ "live.text[242]", "live.text", 0 ],
-			"obj-20::obj-9::obj-42::obj-22" : [ "live.numbox[129]", "live.numbox", 0 ],
-			"obj-20::obj-9::obj-42::obj-49" : [ "live.dial[58]", "STEPS", 0 ],
-			"obj-20::obj-9::obj-43::obj-10" : [ "live.text[243]", "live.text", 0 ],
-			"obj-20::obj-9::obj-43::obj-22" : [ "live.numbox[130]", "live.numbox", 0 ],
-			"obj-20::obj-9::obj-43::obj-49" : [ "live.dial[59]", "STEPS", 0 ],
-			"obj-20::obj-9::obj-44::obj-10" : [ "live.text[244]", "live.text", 0 ],
-			"obj-20::obj-9::obj-44::obj-22" : [ "live.numbox[131]", "live.numbox", 0 ],
-			"obj-20::obj-9::obj-44::obj-49" : [ "live.dial[60]", "STEPS", 0 ],
-			"obj-20::obj-9::obj-45::obj-10" : [ "live.text[245]", "live.text", 0 ],
-			"obj-20::obj-9::obj-45::obj-22" : [ "live.numbox[132]", "live.numbox", 0 ],
-			"obj-20::obj-9::obj-45::obj-49" : [ "live.dial[61]", "STEPS", 0 ],
-			"obj-20::obj-9::obj-46::obj-10" : [ "live.text[246]", "live.text", 0 ],
-			"obj-20::obj-9::obj-46::obj-22" : [ "live.numbox[133]", "live.numbox", 0 ],
-			"obj-20::obj-9::obj-46::obj-49" : [ "live.dial[62]", "STEPS", 0 ],
-			"obj-20::obj-9::obj-5" : [ "live.text[247]", "live.text", 0 ],
-			"obj-20::obj-9::obj-64" : [ "Trig Note 1[25]", "Trig Note 1", 0 ],
-			"obj-20::obj-9::obj-81" : [ "live.numbox[137]", "live.numbox", 0 ],
-			"obj-20::obj-9::obj-85" : [ "live.numbox[134]", "live.numbox", 0 ],
-			"obj-25" : [ "live.tab[4]", "live.tab", 0 ],
-			"obj-31" : [ "live.text[305]", "live.text[1]", 0 ],
-			"obj-32" : [ "live.text[310]", "live.text[3]", 0 ],
-			"obj-3::obj-1" : [ "live.text[1]", "live.text[1]", 0 ],
-			"obj-3::obj-12" : [ "live.text[5]", "live.text[2]", 0 ],
-			"obj-3::obj-23" : [ "live.numbox[18]", "live.numbox[8]", 0 ],
-			"obj-3::obj-33" : [ "live.text[3]", "live.text", 0 ],
-			"obj-3::obj-36" : [ "live.text[8]", "live.text", 0 ],
-			"obj-3::obj-41" : [ "live.text[22]", "live.text", 0 ],
-			"obj-3::obj-43" : [ "live.text[23]", "live.text", 0 ],
-			"obj-3::obj-45" : [ "live.text[9]", "live.text", 0 ],
-			"obj-3::obj-47" : [ "live.text[10]", "live.text", 0 ],
-			"obj-3::obj-49" : [ "live.numbox[7]", "live.numbox[7]", 0 ],
-			"obj-3::obj-5" : [ "live.text", "live.text", 0 ],
-			"obj-3::obj-59" : [ "live.numbox[8]", "live.numbox[7]", 0 ],
-			"obj-3::obj-60" : [ "live.numbox[9]", "live.numbox[7]", 0 ],
-			"obj-3::obj-64" : [ "Trig Note 1[7]", "Trig Note 1", 0 ],
-			"obj-3::obj-72" : [ "live.numbox[10]", "live.numbox[7]", 0 ],
-			"obj-3::obj-76" : [ "live.numbox[11]", "live.numbox[7]", 0 ],
-			"obj-3::obj-81" : [ "live.numbox[17]", "live.numbox", 0 ],
-			"obj-3::obj-85" : [ "live.numbox[16]", "live.numbox", 0 ],
-			"obj-51" : [ "live.text[312]", "live.text[1]", 0 ],
-			"obj-52" : [ "live.text[303]", "live.text[26]", 0 ],
-			"obj-57" : [ "live.text[304]", "live.text[4]", 0 ],
-			"obj-64" : [ "live.text[308]", "live.text[1]", 0 ],
-			"obj-7" : [ "live.text[306]", "live.text[1]", 0 ],
-			"obj-94" : [ "live.text[301]", "live.text[3]", 0 ],
-			"obj-95" : [ "live.text[347]", "live.text[3]", 0 ],
-			"parameterbanks" : 			{
-				"0" : 				{
-					"index" : 0,
-					"name" : "",
-					"parameters" : [ "-", "-", "-", "-", "-", "-", "-", "-" ]
-				}
-
-			}
-,
-			"parameter_overrides" : 			{
-				"obj-14::obj-11::obj-1" : 				{
-					"parameter_longname" : "live.text[145]"
-				}
-,
-				"obj-14::obj-11::obj-10" : 				{
-					"parameter_longname" : "live.text[142]"
-				}
-,
-				"obj-14::obj-11::obj-11" : 				{
-					"parameter_longname" : "live.text[147]"
-				}
-,
-				"obj-14::obj-11::obj-12" : 				{
-					"parameter_longname" : "live.text[140]"
-				}
-,
-				"obj-14::obj-11::obj-13" : 				{
-					"parameter_longname" : "live.text[149]"
-				}
-,
-				"obj-14::obj-11::obj-16" : 				{
-					"parameter_longname" : "live.text[141]"
-				}
-,
-				"obj-14::obj-11::obj-23" : 				{
-					"parameter_longname" : "live.numbox[171]"
-				}
-,
-				"obj-14::obj-11::obj-36" : 				{
-					"parameter_longname" : "live.text[146]"
-				}
-,
-				"obj-14::obj-11::obj-49" : 				{
-					"parameter_longname" : "live.dial[18]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-11::obj-5" : 				{
-					"parameter_longname" : "live.text[144]"
-				}
-,
-				"obj-14::obj-11::obj-59" : 				{
-					"parameter_longname" : "beats1[21]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-11::obj-6" : 				{
-					"parameter_longname" : "live.text[148]"
-				}
-,
-				"obj-14::obj-11::obj-60" : 				{
-					"parameter_longname" : "offset1[46]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-11::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[15]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-11::obj-72" : 				{
-					"parameter_longname" : "offset1[45]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-11::obj-76" : 				{
-					"parameter_longname" : "offset1[44]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-11::obj-8" : 				{
-					"parameter_longname" : "live.text[143]"
-				}
-,
-				"obj-14::obj-11::obj-81" : 				{
-					"parameter_longname" : "live.numbox[173]"
-				}
-,
-				"obj-14::obj-11::obj-85" : 				{
-					"parameter_longname" : "live.numbox[172]"
-				}
-,
-				"obj-14::obj-1::obj-1" : 				{
-					"parameter_longname" : "live.text[99]"
-				}
-,
-				"obj-14::obj-1::obj-10" : 				{
-					"parameter_longname" : "live.text[98]"
-				}
-,
-				"obj-14::obj-1::obj-11" : 				{
-					"parameter_longname" : "live.text[97]"
-				}
-,
-				"obj-14::obj-1::obj-12" : 				{
-					"parameter_longname" : "live.text[94]"
-				}
-,
-				"obj-14::obj-1::obj-13" : 				{
-					"parameter_longname" : "live.text[92]"
-				}
-,
-				"obj-14::obj-1::obj-16" : 				{
-					"parameter_longname" : "live.text[93]"
-				}
-,
-				"obj-14::obj-1::obj-23" : 				{
-					"parameter_longname" : "live.numbox[156]"
-				}
-,
-				"obj-14::obj-1::obj-36" : 				{
-					"parameter_longname" : "live.text[91]"
-				}
-,
-				"obj-14::obj-1::obj-49" : 				{
-					"parameter_longname" : "live.dial[13]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-1::obj-5" : 				{
-					"parameter_longname" : "live.text[95]"
-				}
-,
-				"obj-14::obj-1::obj-59" : 				{
-					"parameter_longname" : "beats1[6]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-1::obj-6" : 				{
-					"parameter_longname" : "live.text[90]"
-				}
-,
-				"obj-14::obj-1::obj-60" : 				{
-					"parameter_longname" : "offset1[20]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-1::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[10]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-1::obj-72" : 				{
-					"parameter_longname" : "offset1[21]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-1::obj-76" : 				{
-					"parameter_longname" : "offset1[19]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-1::obj-8" : 				{
-					"parameter_longname" : "live.text[96]"
-				}
-,
-				"obj-14::obj-1::obj-81" : 				{
-					"parameter_longname" : "live.numbox[158]"
-				}
-,
-				"obj-14::obj-1::obj-85" : 				{
-					"parameter_longname" : "live.numbox[157]"
-				}
-,
-				"obj-14::obj-28::obj-1" : 				{
-					"parameter_longname" : "live.text[134]"
-				}
-,
-				"obj-14::obj-28::obj-10" : 				{
-					"parameter_longname" : "live.text[130]"
-				}
-,
-				"obj-14::obj-28::obj-11" : 				{
-					"parameter_longname" : "live.text[138]"
-				}
-,
-				"obj-14::obj-28::obj-12" : 				{
-					"parameter_longname" : "live.text[136]"
-				}
-,
-				"obj-14::obj-28::obj-13" : 				{
-					"parameter_longname" : "live.text[133]"
-				}
-,
-				"obj-14::obj-28::obj-16" : 				{
-					"parameter_longname" : "live.text[135]"
-				}
-,
-				"obj-14::obj-28::obj-23" : 				{
-					"parameter_longname" : "live.numbox[168]"
-				}
-,
-				"obj-14::obj-28::obj-36" : 				{
-					"parameter_longname" : "live.text[139]"
-				}
-,
-				"obj-14::obj-28::obj-49" : 				{
-					"parameter_longname" : "live.dial[17]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-28::obj-5" : 				{
-					"parameter_longname" : "live.text[137]"
-				}
-,
-				"obj-14::obj-28::obj-59" : 				{
-					"parameter_longname" : "beats1[20]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-28::obj-6" : 				{
-					"parameter_longname" : "live.text[131]"
-				}
-,
-				"obj-14::obj-28::obj-60" : 				{
-					"parameter_longname" : "offset1[42]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-28::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[14]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-28::obj-72" : 				{
-					"parameter_longname" : "offset1[41]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-28::obj-76" : 				{
-					"parameter_longname" : "offset1[43]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-28::obj-8" : 				{
-					"parameter_longname" : "live.text[132]"
-				}
-,
-				"obj-14::obj-28::obj-81" : 				{
-					"parameter_longname" : "live.numbox[170]"
-				}
-,
-				"obj-14::obj-28::obj-85" : 				{
-					"parameter_longname" : "live.numbox[169]"
-				}
-,
-				"obj-14::obj-2::obj-1" : 				{
-					"parameter_longname" : "live.text[105]"
-				}
-,
-				"obj-14::obj-2::obj-10" : 				{
-					"parameter_longname" : "live.text[101]"
-				}
-,
-				"obj-14::obj-2::obj-11" : 				{
-					"parameter_longname" : "live.text[103]"
-				}
-,
-				"obj-14::obj-2::obj-12" : 				{
-					"parameter_longname" : "live.text[108]"
-				}
-,
-				"obj-14::obj-2::obj-13" : 				{
-					"parameter_longname" : "live.text[109]"
-				}
-,
-				"obj-14::obj-2::obj-16" : 				{
-					"parameter_longname" : "live.text[104]"
-				}
-,
-				"obj-14::obj-2::obj-23" : 				{
-					"parameter_longname" : "live.numbox[161]"
-				}
-,
-				"obj-14::obj-2::obj-36" : 				{
-					"parameter_longname" : "live.text[107]"
-				}
-,
-				"obj-14::obj-2::obj-49" : 				{
-					"parameter_longname" : "live.dial[14]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-2::obj-5" : 				{
-					"parameter_longname" : "live.text[100]"
-				}
-,
-				"obj-14::obj-2::obj-59" : 				{
-					"parameter_longname" : "beats1[7]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-2::obj-6" : 				{
-					"parameter_longname" : "live.text[102]"
-				}
-,
-				"obj-14::obj-2::obj-60" : 				{
-					"parameter_longname" : "offset1[23]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-2::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[11]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-2::obj-72" : 				{
-					"parameter_longname" : "offset1[24]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-2::obj-76" : 				{
-					"parameter_longname" : "offset1[22]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-2::obj-8" : 				{
-					"parameter_longname" : "live.text[106]"
-				}
-,
-				"obj-14::obj-2::obj-81" : 				{
-					"parameter_longname" : "live.numbox[159]"
-				}
-,
-				"obj-14::obj-2::obj-85" : 				{
-					"parameter_longname" : "live.numbox[160]"
-				}
-,
-				"obj-14::obj-38::obj-1" : 				{
-					"parameter_longname" : "live.text[179]"
-				}
-,
-				"obj-14::obj-38::obj-10" : 				{
-					"parameter_longname" : "live.text[174]"
-				}
-,
-				"obj-14::obj-38::obj-11" : 				{
-					"parameter_longname" : "live.text[171]"
-				}
-,
-				"obj-14::obj-38::obj-12" : 				{
-					"parameter_longname" : "live.text[173]"
-				}
-,
-				"obj-14::obj-38::obj-13" : 				{
-					"parameter_longname" : "live.text[175]"
-				}
-,
-				"obj-14::obj-38::obj-16" : 				{
-					"parameter_longname" : "live.text[170]"
-				}
-,
-				"obj-14::obj-38::obj-23" : 				{
-					"parameter_longname" : "live.numbox[180]"
-				}
-,
-				"obj-14::obj-38::obj-36" : 				{
-					"parameter_longname" : "live.text[177]"
-				}
-,
-				"obj-14::obj-38::obj-49" : 				{
-					"parameter_longname" : "live.dial[21]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-38::obj-5" : 				{
-					"parameter_longname" : "live.text[176]"
-				}
-,
-				"obj-14::obj-38::obj-59" : 				{
-					"parameter_longname" : "beats1[24]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-38::obj-6" : 				{
-					"parameter_longname" : "live.text[172]"
-				}
-,
-				"obj-14::obj-38::obj-60" : 				{
-					"parameter_longname" : "offset1[55]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-38::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[18]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-38::obj-72" : 				{
-					"parameter_longname" : "offset1[53]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-38::obj-76" : 				{
-					"parameter_longname" : "offset1[54]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-38::obj-8" : 				{
-					"parameter_longname" : "live.text[178]"
-				}
-,
-				"obj-14::obj-38::obj-81" : 				{
-					"parameter_longname" : "live.numbox[181]"
-				}
-,
-				"obj-14::obj-38::obj-85" : 				{
-					"parameter_longname" : "live.numbox[182]"
-				}
-,
-				"obj-14::obj-3::obj-1" : 				{
-					"parameter_longname" : "live.text[119]"
-				}
-,
-				"obj-14::obj-3::obj-10" : 				{
-					"parameter_longname" : "live.text[112]"
-				}
-,
-				"obj-14::obj-3::obj-11" : 				{
-					"parameter_longname" : "live.text[111]"
-				}
-,
-				"obj-14::obj-3::obj-12" : 				{
-					"parameter_longname" : "live.text[113]"
-				}
-,
-				"obj-14::obj-3::obj-13" : 				{
-					"parameter_longname" : "live.text[110]"
-				}
-,
-				"obj-14::obj-3::obj-16" : 				{
-					"parameter_longname" : "live.text[118]"
-				}
-,
-				"obj-14::obj-3::obj-23" : 				{
-					"parameter_longname" : "live.numbox[164]"
-				}
-,
-				"obj-14::obj-3::obj-36" : 				{
-					"parameter_longname" : "live.text[114]"
-				}
-,
-				"obj-14::obj-3::obj-49" : 				{
-					"parameter_longname" : "live.dial[15]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-3::obj-5" : 				{
-					"parameter_longname" : "live.text[116]"
-				}
-,
-				"obj-14::obj-3::obj-59" : 				{
-					"parameter_longname" : "beats1[18]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-3::obj-6" : 				{
-					"parameter_longname" : "live.text[117]"
-				}
-,
-				"obj-14::obj-3::obj-60" : 				{
-					"parameter_longname" : "offset1[35]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-3::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[12]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-3::obj-72" : 				{
-					"parameter_longname" : "offset1[37]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-3::obj-76" : 				{
-					"parameter_longname" : "offset1[36]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-3::obj-8" : 				{
-					"parameter_longname" : "live.text[115]"
-				}
-,
-				"obj-14::obj-3::obj-81" : 				{
-					"parameter_longname" : "live.numbox[162]"
-				}
-,
-				"obj-14::obj-3::obj-85" : 				{
-					"parameter_longname" : "live.numbox[163]"
-				}
-,
-				"obj-14::obj-4::obj-1" : 				{
-					"parameter_longname" : "live.text[129]"
-				}
-,
-				"obj-14::obj-4::obj-10" : 				{
-					"parameter_longname" : "live.text[126]"
-				}
-,
-				"obj-14::obj-4::obj-11" : 				{
-					"parameter_longname" : "live.text[124]"
-				}
-,
-				"obj-14::obj-4::obj-12" : 				{
-					"parameter_longname" : "live.text[122]"
-				}
-,
-				"obj-14::obj-4::obj-13" : 				{
-					"parameter_longname" : "live.text[128]"
-				}
-,
-				"obj-14::obj-4::obj-16" : 				{
-					"parameter_longname" : "live.text[123]"
-				}
-,
-				"obj-14::obj-4::obj-23" : 				{
-					"parameter_longname" : "live.numbox[167]"
-				}
-,
-				"obj-14::obj-4::obj-36" : 				{
-					"parameter_longname" : "live.text[125]"
-				}
-,
-				"obj-14::obj-4::obj-49" : 				{
-					"parameter_longname" : "live.dial[16]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-4::obj-5" : 				{
-					"parameter_longname" : "live.text[121]"
-				}
-,
-				"obj-14::obj-4::obj-59" : 				{
-					"parameter_longname" : "beats1[19]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-4::obj-6" : 				{
-					"parameter_longname" : "live.text[120]"
-				}
-,
-				"obj-14::obj-4::obj-60" : 				{
-					"parameter_longname" : "offset1[38]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-4::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[13]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-4::obj-72" : 				{
-					"parameter_longname" : "offset1[39]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-4::obj-76" : 				{
-					"parameter_longname" : "offset1[40]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-4::obj-8" : 				{
-					"parameter_longname" : "live.text[127]"
-				}
-,
-				"obj-14::obj-4::obj-81" : 				{
-					"parameter_longname" : "live.numbox[166]"
-				}
-,
-				"obj-14::obj-4::obj-85" : 				{
-					"parameter_longname" : "live.numbox[165]"
-				}
-,
-				"obj-14::obj-8::obj-1" : 				{
-					"parameter_longname" : "live.text[162]"
-				}
-,
-				"obj-14::obj-8::obj-10" : 				{
-					"parameter_longname" : "live.text[166]"
-				}
-,
-				"obj-14::obj-8::obj-11" : 				{
-					"parameter_longname" : "live.text[161]"
-				}
-,
-				"obj-14::obj-8::obj-12" : 				{
-					"parameter_longname" : "live.text[169]"
-				}
-,
-				"obj-14::obj-8::obj-13" : 				{
-					"parameter_longname" : "live.text[165]"
-				}
-,
-				"obj-14::obj-8::obj-16" : 				{
-					"parameter_longname" : "live.text[163]"
-				}
-,
-				"obj-14::obj-8::obj-23" : 				{
-					"parameter_longname" : "live.numbox[178]"
-				}
-,
-				"obj-14::obj-8::obj-36" : 				{
-					"parameter_longname" : "live.text[164]"
-				}
-,
-				"obj-14::obj-8::obj-49" : 				{
-					"parameter_longname" : "live.dial[20]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-8::obj-5" : 				{
-					"parameter_longname" : "live.text[167]"
-				}
-,
-				"obj-14::obj-8::obj-59" : 				{
-					"parameter_longname" : "beats1[23]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-8::obj-6" : 				{
-					"parameter_longname" : "live.text[160]"
-				}
-,
-				"obj-14::obj-8::obj-60" : 				{
-					"parameter_longname" : "offset1[50]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-8::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[17]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-8::obj-72" : 				{
-					"parameter_longname" : "offset1[52]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-8::obj-76" : 				{
-					"parameter_longname" : "offset1[51]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-8::obj-8" : 				{
-					"parameter_longname" : "live.text[168]"
-				}
-,
-				"obj-14::obj-8::obj-81" : 				{
-					"parameter_longname" : "live.numbox[177]"
-				}
-,
-				"obj-14::obj-8::obj-85" : 				{
-					"parameter_longname" : "live.numbox[179]"
-				}
-,
-				"obj-14::obj-9::obj-1" : 				{
-					"parameter_longname" : "live.text[158]"
-				}
-,
-				"obj-14::obj-9::obj-10" : 				{
-					"parameter_longname" : "live.text[153]"
-				}
-,
-				"obj-14::obj-9::obj-11" : 				{
-					"parameter_longname" : "live.text[151]"
-				}
-,
-				"obj-14::obj-9::obj-12" : 				{
-					"parameter_longname" : "live.text[159]"
-				}
-,
-				"obj-14::obj-9::obj-13" : 				{
-					"parameter_longname" : "live.text[150]"
-				}
-,
-				"obj-14::obj-9::obj-16" : 				{
-					"parameter_longname" : "live.text[157]"
-				}
-,
-				"obj-14::obj-9::obj-23" : 				{
-					"parameter_longname" : "live.numbox[175]"
-				}
-,
-				"obj-14::obj-9::obj-36" : 				{
-					"parameter_longname" : "live.text[156]"
-				}
-,
-				"obj-14::obj-9::obj-49" : 				{
-					"parameter_longname" : "live.dial[19]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-9::obj-5" : 				{
-					"parameter_longname" : "live.text[152]"
-				}
-,
-				"obj-14::obj-9::obj-59" : 				{
-					"parameter_longname" : "beats1[22]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-9::obj-6" : 				{
-					"parameter_longname" : "live.text[155]"
-				}
-,
-				"obj-14::obj-9::obj-60" : 				{
-					"parameter_longname" : "offset1[47]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-9::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[16]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-14::obj-9::obj-72" : 				{
-					"parameter_longname" : "offset1[48]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-9::obj-76" : 				{
-					"parameter_longname" : "offset1[49]",
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-14::obj-9::obj-8" : 				{
-					"parameter_longname" : "live.text[154]"
-				}
-,
-				"obj-14::obj-9::obj-81" : 				{
-					"parameter_longname" : "live.numbox[176]"
-				}
-,
-				"obj-14::obj-9::obj-85" : 				{
-					"parameter_longname" : "live.numbox[174]"
-				}
-,
-				"obj-20::obj-11::obj-1" : 				{
-					"parameter_longname" : "live.text[239]"
-				}
-,
-				"obj-20::obj-11::obj-10" : 				{
-					"parameter_longname" : "live.text[241]"
-				}
-,
-				"obj-20::obj-11::obj-12" : 				{
-					"parameter_longname" : "live.text[238]"
-				}
-,
-				"obj-20::obj-11::obj-23" : 				{
-					"parameter_longname" : "live.numbox[128]"
-				}
-,
-				"obj-20::obj-11::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[233]"
-				}
-,
-				"obj-20::obj-11::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[120]"
-				}
-,
-				"obj-20::obj-11::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[52]"
-				}
-,
-				"obj-20::obj-11::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[234]"
-				}
-,
-				"obj-20::obj-11::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[121]"
-				}
-,
-				"obj-20::obj-11::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[53]"
-				}
-,
-				"obj-20::obj-11::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[235]"
-				}
-,
-				"obj-20::obj-11::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[122]"
-				}
-,
-				"obj-20::obj-11::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[54]"
-				}
-,
-				"obj-20::obj-11::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[236]"
-				}
-,
-				"obj-20::obj-11::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[123]"
-				}
-,
-				"obj-20::obj-11::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[55]"
-				}
-,
-				"obj-20::obj-11::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[237]"
-				}
-,
-				"obj-20::obj-11::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[124]"
-				}
-,
-				"obj-20::obj-11::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[56]"
-				}
-,
-				"obj-20::obj-11::obj-5" : 				{
-					"parameter_longname" : "live.text[240]"
-				}
-,
-				"obj-20::obj-11::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[24]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-11::obj-81" : 				{
-					"parameter_longname" : "live.numbox[127]"
-				}
-,
-				"obj-20::obj-11::obj-85" : 				{
-					"parameter_longname" : "live.numbox[125]"
-				}
-,
-				"obj-20::obj-1::obj-1" : 				{
-					"parameter_longname" : "live.text[191]"
-				}
-,
-				"obj-20::obj-1::obj-10" : 				{
-					"parameter_longname" : "live.text[194]"
-				}
-,
-				"obj-20::obj-1::obj-12" : 				{
-					"parameter_longname" : "live.text[192]"
-				}
-,
-				"obj-20::obj-1::obj-23" : 				{
-					"parameter_longname" : "live.numbox[81]"
-				}
-,
-				"obj-20::obj-1::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[187]"
-				}
-,
-				"obj-20::obj-1::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[22]"
-				}
-,
-				"obj-20::obj-1::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[188]"
-				}
-,
-				"obj-20::obj-1::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[76]"
-				}
-,
-				"obj-20::obj-1::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[23]"
-				}
-,
-				"obj-20::obj-1::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[272]"
-				}
-,
-				"obj-20::obj-1::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[77]"
-				}
-,
-				"obj-20::obj-1::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[24]"
-				}
-,
-				"obj-20::obj-1::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[189]"
-				}
-,
-				"obj-20::obj-1::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[78]"
-				}
-,
-				"obj-20::obj-1::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[25]"
-				}
-,
-				"obj-20::obj-1::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[190]"
-				}
-,
-				"obj-20::obj-1::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[79]"
-				}
-,
-				"obj-20::obj-1::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[26]"
-				}
-,
-				"obj-20::obj-1::obj-5" : 				{
-					"parameter_longname" : "live.text[193]"
-				}
-,
-				"obj-20::obj-1::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[19]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-1::obj-81" : 				{
-					"parameter_longname" : "live.numbox[80]"
-				}
-,
-				"obj-20::obj-1::obj-85" : 				{
-					"parameter_longname" : "live.numbox[83]"
-				}
-,
-				"obj-20::obj-28::obj-1" : 				{
-					"parameter_longname" : "live.text[230]"
-				}
-,
-				"obj-20::obj-28::obj-10" : 				{
-					"parameter_longname" : "live.text[231]"
-				}
-,
-				"obj-20::obj-28::obj-12" : 				{
-					"parameter_longname" : "live.text[229]"
-				}
-,
-				"obj-20::obj-28::obj-23" : 				{
-					"parameter_longname" : "live.numbox[118]"
-				}
-,
-				"obj-20::obj-28::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[224]"
-				}
-,
-				"obj-20::obj-28::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[111]"
-				}
-,
-				"obj-20::obj-28::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[46]"
-				}
-,
-				"obj-20::obj-28::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[225]"
-				}
-,
-				"obj-20::obj-28::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[112]"
-				}
-,
-				"obj-20::obj-28::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[47]"
-				}
-,
-				"obj-20::obj-28::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[226]"
-				}
-,
-				"obj-20::obj-28::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[113]"
-				}
-,
-				"obj-20::obj-28::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[48]"
-				}
-,
-				"obj-20::obj-28::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[227]"
-				}
-,
-				"obj-20::obj-28::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[114]"
-				}
-,
-				"obj-20::obj-28::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[49]"
-				}
-,
-				"obj-20::obj-28::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[228]"
-				}
-,
-				"obj-20::obj-28::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[115]"
-				}
-,
-				"obj-20::obj-28::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[50]"
-				}
-,
-				"obj-20::obj-28::obj-5" : 				{
-					"parameter_longname" : "live.text[232]"
-				}
-,
-				"obj-20::obj-28::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[23]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-28::obj-81" : 				{
-					"parameter_longname" : "live.numbox[116]"
-				}
-,
-				"obj-20::obj-28::obj-85" : 				{
-					"parameter_longname" : "live.numbox[117]"
-				}
-,
-				"obj-20::obj-2::obj-1" : 				{
-					"parameter_longname" : "live.text[203]"
-				}
-,
-				"obj-20::obj-2::obj-10" : 				{
-					"parameter_longname" : "live.text[202]"
-				}
-,
-				"obj-20::obj-2::obj-12" : 				{
-					"parameter_longname" : "live.text[200]"
-				}
-,
-				"obj-20::obj-2::obj-23" : 				{
-					"parameter_longname" : "live.numbox[89]"
-				}
-,
-				"obj-20::obj-2::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[195]"
-				}
-,
-				"obj-20::obj-2::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[84]"
-				}
-,
-				"obj-20::obj-2::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[28]"
-				}
-,
-				"obj-20::obj-2::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[196]"
-				}
-,
-				"obj-20::obj-2::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[85]"
-				}
-,
-				"obj-20::obj-2::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[29]"
-				}
-,
-				"obj-20::obj-2::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[197]"
-				}
-,
-				"obj-20::obj-2::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[86]"
-				}
-,
-				"obj-20::obj-2::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[30]"
-				}
-,
-				"obj-20::obj-2::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[198]"
-				}
-,
-				"obj-20::obj-2::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[87]"
-				}
-,
-				"obj-20::obj-2::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[31]"
-				}
-,
-				"obj-20::obj-2::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[199]"
-				}
-,
-				"obj-20::obj-2::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[88]"
-				}
-,
-				"obj-20::obj-2::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[32]"
-				}
-,
-				"obj-20::obj-2::obj-5" : 				{
-					"parameter_longname" : "live.text[201]"
-				}
-,
-				"obj-20::obj-2::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[20]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-2::obj-81" : 				{
-					"parameter_longname" : "live.numbox[90]"
-				}
-,
-				"obj-20::obj-2::obj-85" : 				{
-					"parameter_longname" : "live.numbox[92]"
-				}
-,
-				"obj-20::obj-38::obj-1" : 				{
-					"parameter_longname" : "live.text[289]"
-				}
-,
-				"obj-20::obj-38::obj-10" : 				{
-					"parameter_longname" : "live.text[290]"
-				}
-,
-				"obj-20::obj-38::obj-12" : 				{
-					"parameter_longname" : "live.text[288]"
-				}
-,
-				"obj-20::obj-38::obj-23" : 				{
-					"parameter_longname" : "live.numbox[154]"
-				}
-,
-				"obj-20::obj-38::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[256]"
-				}
-,
-				"obj-20::obj-38::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[147]"
-				}
-,
-				"obj-20::obj-38::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[70]"
-				}
-,
-				"obj-20::obj-38::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[257]"
-				}
-,
-				"obj-20::obj-38::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[148]"
-				}
-,
-				"obj-20::obj-38::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[71]"
-				}
-,
-				"obj-20::obj-38::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[284]"
-				}
-,
-				"obj-20::obj-38::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[149]"
-				}
-,
-				"obj-20::obj-38::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[72]"
-				}
-,
-				"obj-20::obj-38::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[285]"
-				}
-,
-				"obj-20::obj-38::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[150]"
-				}
-,
-				"obj-20::obj-38::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[73]"
-				}
-,
-				"obj-20::obj-38::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[286]"
-				}
-,
-				"obj-20::obj-38::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[151]"
-				}
-,
-				"obj-20::obj-38::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[74]"
-				}
-,
-				"obj-20::obj-38::obj-5" : 				{
-					"parameter_longname" : "live.text[287]"
-				}
-,
-				"obj-20::obj-38::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[27]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-38::obj-81" : 				{
-					"parameter_longname" : "live.numbox[152]"
-				}
-,
-				"obj-20::obj-38::obj-85" : 				{
-					"parameter_longname" : "live.numbox[155]"
-				}
-,
-				"obj-20::obj-3::obj-1" : 				{
-					"parameter_longname" : "live.text[211]"
-				}
-,
-				"obj-20::obj-3::obj-10" : 				{
-					"parameter_longname" : "live.text[212]"
-				}
-,
-				"obj-20::obj-3::obj-12" : 				{
-					"parameter_longname" : "live.text[214]"
-				}
-,
-				"obj-20::obj-3::obj-23" : 				{
-					"parameter_longname" : "live.numbox[101]"
-				}
-,
-				"obj-20::obj-3::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[208]"
-				}
-,
-				"obj-20::obj-3::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[93]"
-				}
-,
-				"obj-20::obj-3::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[34]"
-				}
-,
-				"obj-20::obj-3::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[204]"
-				}
-,
-				"obj-20::obj-3::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[94]"
-				}
-,
-				"obj-20::obj-3::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[35]"
-				}
-,
-				"obj-20::obj-3::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[205]"
-				}
-,
-				"obj-20::obj-3::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[95]"
-				}
-,
-				"obj-20::obj-3::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[36]"
-				}
-,
-				"obj-20::obj-3::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[209]"
-				}
-,
-				"obj-20::obj-3::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[96]"
-				}
-,
-				"obj-20::obj-3::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[37]"
-				}
-,
-				"obj-20::obj-3::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[210]"
-				}
-,
-				"obj-20::obj-3::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[97]"
-				}
-,
-				"obj-20::obj-3::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[38]"
-				}
-,
-				"obj-20::obj-3::obj-5" : 				{
-					"parameter_longname" : "live.text[213]"
-				}
-,
-				"obj-20::obj-3::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[21]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-3::obj-81" : 				{
-					"parameter_longname" : "live.numbox[99]"
-				}
-,
-				"obj-20::obj-3::obj-85" : 				{
-					"parameter_longname" : "live.numbox[100]"
-				}
-,
-				"obj-20::obj-4::obj-1" : 				{
-					"parameter_longname" : "live.text[223]"
-				}
-,
-				"obj-20::obj-4::obj-10" : 				{
-					"parameter_longname" : "live.text[220]"
-				}
-,
-				"obj-20::obj-4::obj-12" : 				{
-					"parameter_longname" : "live.text[221]"
-				}
-,
-				"obj-20::obj-4::obj-23" : 				{
-					"parameter_longname" : "live.numbox[109]"
-				}
-,
-				"obj-20::obj-4::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[215]"
-				}
-,
-				"obj-20::obj-4::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[102]"
-				}
-,
-				"obj-20::obj-4::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[40]"
-				}
-,
-				"obj-20::obj-4::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[216]"
-				}
-,
-				"obj-20::obj-4::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[103]"
-				}
-,
-				"obj-20::obj-4::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[41]"
-				}
-,
-				"obj-20::obj-4::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[217]"
-				}
-,
-				"obj-20::obj-4::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[104]"
-				}
-,
-				"obj-20::obj-4::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[42]"
-				}
-,
-				"obj-20::obj-4::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[218]"
-				}
-,
-				"obj-20::obj-4::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[105]"
-				}
-,
-				"obj-20::obj-4::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[43]"
-				}
-,
-				"obj-20::obj-4::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[219]"
-				}
-,
-				"obj-20::obj-4::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[106]"
-				}
-,
-				"obj-20::obj-4::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[44]"
-				}
-,
-				"obj-20::obj-4::obj-5" : 				{
-					"parameter_longname" : "live.text[222]"
-				}
-,
-				"obj-20::obj-4::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[22]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-4::obj-81" : 				{
-					"parameter_longname" : "live.numbox[107]"
-				}
-,
-				"obj-20::obj-4::obj-85" : 				{
-					"parameter_longname" : "live.numbox[108]"
-				}
-,
-				"obj-20::obj-8::obj-1" : 				{
-					"parameter_longname" : "live.text[283]"
-				}
-,
-				"obj-20::obj-8::obj-10" : 				{
-					"parameter_longname" : "live.text[206]"
-				}
-,
-				"obj-20::obj-8::obj-12" : 				{
-					"parameter_longname" : "live.text[255]"
-				}
-,
-				"obj-20::obj-8::obj-23" : 				{
-					"parameter_longname" : "live.numbox[145]"
-				}
-,
-				"obj-20::obj-8::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[251]"
-				}
-,
-				"obj-20::obj-8::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[138]"
-				}
-,
-				"obj-20::obj-8::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[64]"
-				}
-,
-				"obj-20::obj-8::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[252]"
-				}
-,
-				"obj-20::obj-8::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[139]"
-				}
-,
-				"obj-20::obj-8::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[65]"
-				}
-,
-				"obj-20::obj-8::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[253]"
-				}
-,
-				"obj-20::obj-8::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[140]"
-				}
-,
-				"obj-20::obj-8::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[66]"
-				}
-,
-				"obj-20::obj-8::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[273]"
-				}
-,
-				"obj-20::obj-8::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[141]"
-				}
-,
-				"obj-20::obj-8::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[67]"
-				}
-,
-				"obj-20::obj-8::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[282]"
-				}
-,
-				"obj-20::obj-8::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[142]"
-				}
-,
-				"obj-20::obj-8::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[68]"
-				}
-,
-				"obj-20::obj-8::obj-5" : 				{
-					"parameter_longname" : "live.text[254]"
-				}
-,
-				"obj-20::obj-8::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[26]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-8::obj-81" : 				{
-					"parameter_longname" : "live.numbox[143]"
-				}
-,
-				"obj-20::obj-8::obj-85" : 				{
-					"parameter_longname" : "live.numbox[146]"
-				}
-,
-				"obj-20::obj-9::obj-1" : 				{
-					"parameter_longname" : "live.text[249]"
-				}
-,
-				"obj-20::obj-9::obj-10" : 				{
-					"parameter_longname" : "live.text[248]"
-				}
-,
-				"obj-20::obj-9::obj-12" : 				{
-					"parameter_longname" : "live.text[250]"
-				}
-,
-				"obj-20::obj-9::obj-23" : 				{
-					"parameter_longname" : "live.numbox[135]"
-				}
-,
-				"obj-20::obj-9::obj-42::obj-10" : 				{
-					"parameter_longname" : "live.text[242]"
-				}
-,
-				"obj-20::obj-9::obj-42::obj-22" : 				{
-					"parameter_longname" : "live.numbox[129]"
-				}
-,
-				"obj-20::obj-9::obj-42::obj-49" : 				{
-					"parameter_longname" : "live.dial[58]"
-				}
-,
-				"obj-20::obj-9::obj-43::obj-10" : 				{
-					"parameter_longname" : "live.text[243]"
-				}
-,
-				"obj-20::obj-9::obj-43::obj-22" : 				{
-					"parameter_longname" : "live.numbox[130]"
-				}
-,
-				"obj-20::obj-9::obj-43::obj-49" : 				{
-					"parameter_longname" : "live.dial[59]"
-				}
-,
-				"obj-20::obj-9::obj-44::obj-10" : 				{
-					"parameter_longname" : "live.text[244]"
-				}
-,
-				"obj-20::obj-9::obj-44::obj-22" : 				{
-					"parameter_longname" : "live.numbox[131]"
-				}
-,
-				"obj-20::obj-9::obj-44::obj-49" : 				{
-					"parameter_longname" : "live.dial[60]"
-				}
-,
-				"obj-20::obj-9::obj-45::obj-10" : 				{
-					"parameter_longname" : "live.text[245]"
-				}
-,
-				"obj-20::obj-9::obj-45::obj-22" : 				{
-					"parameter_longname" : "live.numbox[132]"
-				}
-,
-				"obj-20::obj-9::obj-45::obj-49" : 				{
-					"parameter_longname" : "live.dial[61]"
-				}
-,
-				"obj-20::obj-9::obj-46::obj-10" : 				{
-					"parameter_longname" : "live.text[246]"
-				}
-,
-				"obj-20::obj-9::obj-46::obj-22" : 				{
-					"parameter_longname" : "live.numbox[133]"
-				}
-,
-				"obj-20::obj-9::obj-46::obj-49" : 				{
-					"parameter_longname" : "live.dial[62]"
-				}
-,
-				"obj-20::obj-9::obj-5" : 				{
-					"parameter_longname" : "live.text[247]"
-				}
-,
-				"obj-20::obj-9::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_longname" : "Trig Note 1[25]",
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-20::obj-9::obj-81" : 				{
-					"parameter_longname" : "live.numbox[137]"
-				}
-,
-				"obj-20::obj-9::obj-85" : 				{
-					"parameter_longname" : "live.numbox[134]"
-				}
-,
-				"obj-3::obj-49" : 				{
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-3::obj-59" : 				{
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-3::obj-60" : 				{
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-3::obj-64" : 				{
-					"parameter_invisible" : 0,
-					"parameter_modmode" : 0,
-					"parameter_range" : [ "0:C-2", "1:C♯-2", "2:D-2", "3:D♯-2", "4:E-2", "5:F-2", "6:F♯-2", "7:G-2", "8:G♯-2", "9:A-2", "10:A♯-2", "11:B-2", "12:C-1", "13:C♯-1", "14:D-1", "15:D♯-1", "16:E-1", "17:F-1", "18:F♯-1", "19:G-1", "20:G♯-1", "21:A-1", "22:A♯-1", "23:B-1", "24:C0", "25:C♯0", "26:D0", "27:D♯0", "28:E0", "29:F0", "30:F♯0", "31:G0", "32:G♯0", "33:A0", "34:A♯0", "35:B0", "36:Bass Drum", "37:Rim Shot", "38:Snare Drum", "39:Hand Clap", "40:Low Conga", "41:Mid Conga", "42:Closed Hi Hat", "43:Hi Conga", "44:Low Tom", "45:Mid Tom", "46:Open Hi Hat", "47:Hi Tom", "48:Maracas", "49:Cymbal", "50:Cow Bell", "51:Claves", "52:E2", "53:F2", "54:F♯2", "55:G2", "56:G♯2", "57:A2", "58:A♯2", "59:B2", "60:C3", "61:C♯3", "62:D3", "63:D♯3", "64:E3", "65:F3", "66:F♯3", "67:G3", "68:G♯3", "69:A3", "70:A♯3", "71:B3", "72:C4", "73:C♯4", "74:D4", "75:D♯4", "76:E4", "77:F4", "78:F♯4", "79:G4", "80:G♯4", "81:A4", "82:A♯4", "83:B4", "84:C5", "85:C♯5", "86:D5", "87:D♯5", "88:E5", "89:F5", "90:F♯5", "91:G5", "92:G♯5", "93:A5", "94:A♯5", "95:B5", "96:C6", "97:C♯6", "98:D6", "99:D♯6", "100:E6", "101:F6", "102:F♯6", "103:G6", "104:G♯6", "105:A6", "106:A♯6", "107:B6", "108:C7", "109:C♯7", "110:D7", "111:D♯7", "112:E7", "113:F7", "114:F♯7", "115:G7", "116:G♯7", "117:A7", "118:A♯7", "119:B7", "120:C8", "121:C♯8", "122:D8", "123:D♯8", "124:E8", "125:F8", "126:F♯8", "127:G8" ],
-					"parameter_type" : 2,
-					"parameter_unitstyle" : 10
-				}
-,
-				"obj-3::obj-72" : 				{
-					"parameter_range" : [ 0, 64 ]
-				}
-,
-				"obj-3::obj-76" : 				{
-					"parameter_range" : [ 0, 64 ]
-				}
-
-			}
-,
-			"inherited_shortname" : 1
-		}
-,
-		"dependency_cache" : [ 			{
-				"name" : "PapaFace.js",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "big_channel_gui.maxpat",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "big_nob_channel_gui.maxpat",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "channel_selector.js",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "cog.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "core.js",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "dice-black.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "dice-white.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "expand.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "letter-n.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "locked.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "nob_bar.maxpat",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "reverse.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "united_channel_gui.maxpat",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "JSON",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "unlocked.svg",
-				"bootpath" : "E:/USER_FOLDERS/Documents/Ableton/User Library/Presets/MIDI Effects/Max MIDI Effect/EuclideanGen",
-				"patcherrelativepath" : ".",
-				"type" : "svg",
-				"implicit" : 1
-			}
- ],
-		"autosave" : 0
+ ]
 	}
 
 }

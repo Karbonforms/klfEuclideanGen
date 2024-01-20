@@ -1,5 +1,9 @@
 Live 12 MIDI Tool generator for Euclidean rhythms. 
 
+![Embedded GUI](img/embedded_channel.png)
+
+![PopUp GUI](img/popface.png)
+
 Uses whole clip length or selection length split according to Steps. (does not care about time signature etc)
 
 Accents and Accent-Offset apply to Beats, same way as Beats and Offset apply to Steps.
